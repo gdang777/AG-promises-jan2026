@@ -1,0 +1,225 @@
+[uWSGI] getting INI configuration from runserver.ini
+*** Starting uWSGI 2.0.24-debian (64bit) on [Sat Jan  4 09:58:25 2025] ***
+compiled with version: 13.2.0 on 17 April 2024 16:23:48
+os: Linux-6.8.0-1017-azure #20-Ubuntu SMP Tue Oct 22 03:43:13 UTC 2024
+nodename: PromiseVM
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /var/www/html/webapps
+detected binary path: /usr/bin/uwsgi-core
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /var/www/html/webapps/promises
+your processes number limit is 31527
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:3031 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 291680 bytes (284 KB) for 3 cores
+*** Operational MODE: preforking ***
+*** no app loaded. going in full dynamic mode ***
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+!!!!!!!!!!!!!! WARNING !!!!!!!!!!!!!!
+no request plugin is loaded, you will not be able to manage requests.
+you may need to install the package for your language of choice, or simply load it with --plugin.
+!!!!!!!!!!! END OF WARNING !!!!!!!!!!
+spawned uWSGI master process (pid: 16876)
+spawned uWSGI worker 1 (pid: 16877, cores: 1)
+spawned uWSGI worker 2 (pid: 16878, cores: 1)
+spawned uWSGI worker 3 (pid: 16879, cores: 1)
+*** Stats server enabled on 127.0.0.1:9190 fd: 13 ***
+[uWSGI] getting INI configuration from runserver.ini
+*** Starting uWSGI 2.0.24-debian (64bit) on [Sat Jan  4 09:59:06 2025] ***
+compiled with version: 13.2.0 on 17 April 2024 16:23:48
+os: Linux-6.8.0-1017-azure #20-Ubuntu SMP Tue Oct 22 03:43:13 UTC 2024
+nodename: PromiseVM
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /var/www/html/webapps
+detected binary path: /usr/bin/uwsgi-core
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /var/www/html/webapps/promises
+your processes number limit is 31527
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (127.0.0.1:3031).
+bind(): Address already in use [core/socket.c line 769]
+[uWSGI] getting INI configuration from runserver.ini
+*** Starting uWSGI 2.0.24-debian (64bit) on [Sat Jan  4 10:01:25 2025] ***
+compiled with version: 13.2.0 on 17 April 2024 16:23:48
+os: Linux-6.8.0-1017-azure #20-Ubuntu SMP Tue Oct 22 03:43:13 UTC 2024
+nodename: PromiseVM
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /var/www/html/webapps
+detected binary path: /usr/bin/uwsgi-core
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /var/www/html/webapps/promises
+your processes number limit is 31527
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (127.0.0.1:3031).
+bind(): Address already in use [core/socket.c line 769]
+-- unavailable modifier requested: 0 --
+[uWSGI] getting INI configuration from runserver.ini
+*** Starting uWSGI 2.0.24-debian (64bit) on [Sat Jan  4 11:53:33 2025] ***
+compiled with version: 13.2.0 on 17 April 2024 16:23:48
+os: Linux-6.8.0-1017-azure #20-Ubuntu SMP Tue Oct 22 03:43:13 UTC 2024
+nodename: PromiseVM
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /var/www/html/webapps
+detected binary path: /usr/bin/uwsgi-core
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /var/www/html/webapps/promises
+your processes number limit is 31527
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (127.0.0.1:3031).
+bind(): Address already in use [core/socket.c line 769]
+-- unavailable modifier requested: 0 --
+-- unavailable modifier requested: 0 --
+-- unavailable modifier requested: 0 --
+-- unavailable modifier requested: 0 --
+-- unavailable modifier requested: 0 --
+-- unavailable modifier requested: 0 --
+-- unavailable modifier requested: 0 --
+-- unavailable modifier requested: 0 --
+-- unavailable modifier requested: 0 --
+-- unavailable modifier requested: 0 --
+-- unavailable modifier requested: 0 --
+-- unavailable modifier requested: 0 --
+-- unavailable modifier requested: 0 --
+-- unavailable modifier requested: 0 --
+-- unavailable modifier requested: 0 --
+-- unavailable modifier requested: 0 --
+invalid request block size: 21573 (max 4096)...skip
+-- unavailable modifier requested: 0 --
+-- unavailable modifier requested: 0 --
+-- unavailable modifier requested: 0 --
+-- unavailable modifier requested: 0 --
+[uWSGI] getting INI configuration from runserver.ini
+*** Starting uWSGI 2.0.24-debian (64bit) on [Sat Jan  4 15:22:56 2025] ***
+compiled with version: 13.2.0 on 17 April 2024 16:23:48
+os: Linux-6.8.0-1017-azure #20-Ubuntu SMP Tue Oct 22 03:43:13 UTC 2024
+nodename: PromiseVM
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /var/www/html/webapps
+detected binary path: /usr/bin/uwsgi-core
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /var/www/html/webapps/promises
+your processes number limit is 31527
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:3031 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 291680 bytes (284 KB) for 3 cores
+*** Operational MODE: preforking ***
+*** no app loaded. going in full dynamic mode ***
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+!!!!!!!!!!!!!! WARNING !!!!!!!!!!!!!!
+no request plugin is loaded, you will not be able to manage requests.
+you may need to install the package for your language of choice, or simply load it with --plugin.
+!!!!!!!!!!! END OF WARNING !!!!!!!!!!
+spawned uWSGI master process (pid: 23130)
+spawned uWSGI worker 1 (pid: 23131, cores: 1)
+spawned uWSGI worker 2 (pid: 23132, cores: 1)
+spawned uWSGI worker 3 (pid: 23133, cores: 1)
+*** Stats server enabled on 127.0.0.1:9190 fd: 13 ***
+-- unavailable modifier requested: 0 --
+-- unavailable modifier requested: 0 --
+-- unavailable modifier requested: 0 --
+[uWSGI] getting INI configuration from runserver.ini
+*** Starting uWSGI 2.0.24-debian (64bit) on [Sat Jan  4 15:32:56 2025] ***
+compiled with version: 13.2.0 on 17 April 2024 16:23:48
+os: Linux-6.8.0-1017-azure #20-Ubuntu SMP Tue Oct 22 03:43:13 UTC 2024
+nodename: PromiseVM
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /var/www/html/webapps
+detected binary path: /usr/bin/uwsgi-core
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /var/www/html/webapps/promises
+your processes number limit is 31527
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:3031 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 291680 bytes (284 KB) for 3 cores
+*** Operational MODE: preforking ***
+*** no app loaded. going in full dynamic mode ***
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+!!!!!!!!!!!!!! WARNING !!!!!!!!!!!!!!
+no request plugin is loaded, you will not be able to manage requests.
+you may need to install the package for your language of choice, or simply load it with --plugin.
+!!!!!!!!!!! END OF WARNING !!!!!!!!!!
+spawned uWSGI master process (pid: 23505)
+spawned uWSGI worker 1 (pid: 23506, cores: 1)
+spawned uWSGI worker 2 (pid: 23507, cores: 1)
+spawned uWSGI worker 3 (pid: 23508, cores: 1)
+*** Stats server enabled on 127.0.0.1:9190 fd: 13 ***
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+-- unavailable modifier requested: 0 --
+-- unavailable modifier requested: 0 --
+-- unavailable modifier requested: 0 --
+-- unavailable modifier requested: 0 --
+-- unavailable modifier requested: 0 --
+-- unavailable modifier requested: 0 --
