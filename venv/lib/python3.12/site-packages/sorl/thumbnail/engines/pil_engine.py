@@ -3,13 +3,24 @@ from io import BytesIO
 from sorl.thumbnail.engines.base import EngineBase
 
 try:
-    from PIL import Image, ImageFile, ImageDraw, ImageFilter, ImageMode
+    from PIL import Image, ImageDraw, ImageFile, ImageFilter, ImageMode
 except ImportError:
     import Image
-    import ImageFile
     import ImageDraw
+    import ImageFile
     import ImageMode
 
+if hasattr(Image, 'Resampling'):
+    ANTIALIAS = Image.Resampling.LANCZOS
+else:
+    ANTIALIAS = Image.ANTIALIAS
+# Image.Transpose added in 9.1.0
+if hasattr(Image, 'Transpose'):
+    FLIP_LEFT_RIGHT = Image.Transpose.FLIP_LEFT_RIGHT
+    FLIP_TOP_BOTTOM = Image.Transpose.FLIP_TOP_BOTTOM
+else:
+    FLIP_LEFT_RIGHT = Image.FLIP_LEFT_RIGHT
+    FLIP_TOP_BOTTOM = Image.FLIP_TOP_BOTTOM
 EXIF_ORIENTATION = 0x0112
 
 
@@ -25,7 +36,7 @@ def color_count(image):
 
 def histogram_entropy_py(image):
     """ Calculate the entropy of an images' histogram. """
-    from math import log2, fsum
+    from math import fsum, log2
     histosum = float(color_count(image))
     histonorm = (histocol / histosum for histocol in image.histogram())
     return -fsum(p * log2(p) for p in histonorm if p != 0.0)
@@ -115,17 +126,17 @@ class Engine(EngineBase):
 
         if orientation:
             if orientation == 2:
-                image = image.transpose(Image.FLIP_LEFT_RIGHT)
+                image = image.transpose(FLIP_LEFT_RIGHT)
             elif orientation == 3:
                 image = image.rotate(180)
             elif orientation == 4:
-                image = image.transpose(Image.FLIP_TOP_BOTTOM)
+                image = image.transpose(FLIP_TOP_BOTTOM)
             elif orientation == 5:
-                image = image.rotate(-90, expand=1).transpose(Image.FLIP_LEFT_RIGHT)
+                image = image.rotate(-90, expand=1).transpose(FLIP_LEFT_RIGHT)
             elif orientation == 6:
                 image = image.rotate(-90, expand=1)
             elif orientation == 7:
-                image = image.rotate(90, expand=1).transpose(Image.FLIP_LEFT_RIGHT)
+                image = image.rotate(90, expand=1).transpose(FLIP_LEFT_RIGHT)
             elif orientation == 8:
                 image = image.rotate(90, expand=1)
 
@@ -230,7 +241,7 @@ class Engine(EngineBase):
     _get_image_entropy = staticmethod(histogram_entropy)
 
     def _scale(self, image, width, height):
-        return image.resize((width, height), resample=Image.ANTIALIAS)
+        return image.resize((width, height), resample=ANTIALIAS)
 
     def _crop(self, image, width, height, x_offset, y_offset):
         return image.crop((x_offset, y_offset,

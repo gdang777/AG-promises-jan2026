@@ -1,0 +1,1606 @@
+{% load static %}
+<!doctype html>
+<html lang="en-US">
+<head>
+   <!-- Required meta tags -->
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Promises</title>
+   <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" />
+   <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
+   <link rel="stylesheet" href="{% static 'css/typography.css' %}">
+   <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+   <link rel="stylesheet" href="{% static 'css/responsive.css' %}" />
+
+   <!-- Global site tag (gtag.js) - Google Analytics -->
+   <script async src="https://www.googletagmanager.com/gtag/js?id=G-K94Z1JEH46"></script>
+   <script>
+     window.dataLayer = window.dataLayer || [];
+     function gtag(){dataLayer.push(arguments);}
+     gtag('js', new Date());
+     gtag('config', 'G-K94Z1JEH46');
+   </script>
+<!-- check box check on submit -->
+   <!-- <script>
+      function check(){
+         if($('#customCheck').is(":checked") == true){
+            $("#submit_button").prop('disabled', false);
+         }
+         else{
+            $("#submit_button").prop('disabled', true);
+            $("#submit_button").css('opacity') = '0.6';
+         }
+      }
+   </script> -->
+   <!-- Facebook Pixel Code -->
+   <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window,document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '769488616976958'); 
+      fbq('track', 'PageView');
+      </script>
+      <noscript>
+      <img height="1" width="1" 
+      src="https://www.facebook.com/tr?id=769488616976958&ev=PageView
+      &noscript=1"/>
+      </noscript>
+      <!-- End Facebook Pixel Code -->
+
+</head>
+
+   <body>
+
+      <!-- Slider Start -->
+      <section id="home" class="iq-main-slider p-0 position-relative">
+         <div class="banner-top-caption position-absolute"><h5 class="text-white">Sikh Heritage Month 2025</h5></div>
+         <div id="home-slider" class="slider m-0 p-0">
+            <div class="slide slick-bg s-bg-1">
+               <div class="container-fluid position-relative h-100">
+                  <div class="slider-inner h-100">
+                     <div class="trailor-video">
+                        <h1 class="slider-text big-title title text-uppercase" data-animation-in="fadeInLeft"
+                              data-delay-in="0.6">Promises</h1>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+            <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" width="44px" height="44px" id="circle"
+               fill="none" stroke="currentColor">
+               <circle r="20" cy="22" cx="22" id="test"></circle>
+            </symbol>
+         </svg>
+         <img src="{% static 'images/tri.png' %}" class="img-fluid position-absolute banner-tri">
+      </section>
+      <!-- Slider End -->
+
+      <section class="movie-detail below-banner position-relative pt-5 pt-md-0">
+         <div class="movie-detail-wrp overflow-hidden">
+            <div class="container-fluid">
+               <div class="row justify-content-between">
+                  <div class="col-md-6 d-flex align-items-end">
+                     <div class="row w-100 mb-4 mb-md-0">
+                        <div class="col-7 d-flex align-items-center">
+                           <div class="pr-content w-100">
+                              <p class="text-white mb-md-0">The Duty Honour & Izzat Project is<br><strong>Funded by the Government Of Canada</strong></p>
+                           </div>
+                        </div>
+                        <div class="col-5 d-flex align-items-center">
+                           <div class="pr-gov w-100 text-center">
+                              <img src="{% static 'images/cananda.png' %}" class="img-fluid" width="180">
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="col-md-6 col-lg-5">
+                     <div class="pr-right-content text-center">
+                        <h4 class="text-white right-title mb-0">Presented By <a href="http://www.imfc.org/" target="_blank">Indus Media Foundation</a><br>In Association With<br><a href="http://www.internationalmovie.com/" target="_blank">International Movie Services</a><br><a href="http://www.renegadeartsentertainment.com/" target="_blank">Renegade Arts Entertainment</a></h4>
+                     </div>
+                     <div class="pr-right-content text-center mt-4">
+                        <div class="p-3 text-center position-relative top-social-card">
+                           <div class="d-flex justify-content-center align-items-center">
+                              <a href="http://www.imfc.org/" target="_blank" class="t-icon">
+                                 <img src="{% static 'images/indus-white.png' %}" class="img-fluid" width="32">
+                              </a>
+                              <a href="https://www.facebook.com/IndusMediaFoundation/" target="_blank" class="t-icon">
+                              <img src="{% static 'images/facebook.png' %}" class="img-fluid" width="32">
+                              </a>
+                              <a href="https://x.com/induscanada" target="_blank" class="t-icon">
+                              <img src="{% static 'images/twitter-w.png' %}" class="img-fluid" width="32" style="background: chocolate">
+                              </a>
+                              <a href="https://www.youtube.com/channel/UCPrYjKlrHo-CcJDgdwCfVTg" target="_blank" class="t-icon">
+                              <img src="{% static 'images/youtube.png' %}" class="img-fluid" width="32">
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+            </div>
+         </div>
+         <a href="#vdo-trailer" class="downbox text-center smoothness">
+            <p class="text-uppercase mb-1" onclick="playHomeVideo()">More</p>
+            <i class="fa fa-chevron-down" onclick="playHomeVideo()"></i>
+            <div class="downbox-inner">
+               <span></span>
+               <span></span>
+               <span></span>
+            </div>
+         </a>
+      </section>
+
+      <section class="d-md-none">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-12">
+                  <div class="dropdown">
+                     <select id="dropdownMenu" onchange="showDiv()">
+                        <option value="trailer">Trailer</option>
+                        <option value="#">Media</option>
+                        <option value="#">Cast & Crew</option>
+                        <!-- <option value="bts-kelowna">BTS Kelowna</option>
+                        <option value="bts-aldergrove">BTS Aldergrove</option>
+                        <option value="bts-maple-ridge">BTS Maple Ridge</option> -->
+                        <option value="#">BTS Kelowna</option>
+                        <option value="#">BTS Aldergrove</option>
+                        <option value="#">BTS Maple Ridge</option>
+                        <option value="#">Story</option>
+                        <option value="#">Share</option>
+                        <option value="#">Support</option>
+                        <option value="#">Learn</option>
+                     </select>
+                   </div>
+               </div>
+            </div>
+         </div>
+
+         <section class="overflow-hidden content-div trailer-m" style="display: block;" id="trailer">
+            <div class="row">
+               <div class="col-12">               
+                  <div class="trending-custom-tab">
+                     <div class="trending-content p-0">
+                        <div id="trending-data1" class="overview-tab tab-pane fade active show">
+                           <div class="trending-info1 align-items-center w-100 animated fadeInUp">                           
+                              <div id="carouselExampleControlsTrailersM" class="carousel slide" data-interval="false">
+                                 <div class="carousel-inner">
+                                     {% for i in all_video %}
+                                     <div class="carousel-item {% if forloop.counter == 1 %}active{% endif %}">
+                                         <div class="supported_card position-relative d-md-flex align-items-center bg-black">
+                                            {% if i.video_url %}
+                                             <!-- Show video if video_url exists -->
+                                             <div class="video-container-m" style="display: block; object-fit: contain;user-select: none;width: 100%; height: auto;">
+                                                <video class="videoPlayer-m" controls preload="none" controlslist="nodownload" style="width: 100%; height: 200px;" poster="media/{{ i.background_url }}">
+                                                   <source src="https://promisesmovie.blob.core.windows.net/media/{{ i.video_url }}?sp=r&st=2025-01-27T19:30:06Z&se=2050-01-28T03:30:06Z&spr=https&sv=2022-11-02&sr=c&sig=PjVd%2Fd%2BpVAxDFIWtr7P0wCox6%2FEXQHQ2SBKlbZ26ppU%3D" type="video/mp4">   
+                                                </video>
+                                             </div>
+                                             {% elif i.link %}
+                                             <!-- Show YouTube iframe if link exists -->
+                                             <iframe width="100%" height="750" src="{{ video.link }}" frameborder="0" allow="accelerometer;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin-bottom: -6px;"></iframe>
+                                             {% endif %}
+ 
+                                             <!-- Carousel controls -->
+                                             <a class="carousel-control-prev-m" href="#carouselExampleControlsTrailersM" role="button" data-slide="prev" onClick="controlVideo('{{ forloop.counter0|add:0 }}','data-trailers-m','prev')" style="left: 0;">
+                                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                 <span class="sr-only">Previous</span>
+                                             </a>
+                                             <a class="carousel-control-next-m" href="#carouselExampleControlsTrailersM" role="button" data-slide="next" onClick="controlVideo('{{ forloop.counter0|add:0 }}','data-trailers-m','next')" style="right: 0;">
+                                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                 <span class="sr-only">Next</span>
+                                             </a>
+                                         </div>
+                                     </div>
+                                     {% endfor %}
+                                 </div>
+ 
+                                 <!-- Spacing -->
+                                 <!-- <div class="spacer bg-white " style="height: 15px;"></div> -->
+ 
+                                 <!-- Carousel Indicators -->
+                                 <div class="carousel-indicators-slide-s d-flex owl-carousel">
+                                   {% for i in all_video %}
+                                   <div class="indicator-wrapper data-trailers-m" data-target="#carouselExampleControlsTrailersM" id="data-trailers-m-{{ forloop.counter0 }}" data-slide-to="{{ forloop.counter0 }}" onClick="controlVideo('{{ forloop.counter0 }}','data-trailers-m')">
+                                      {% if i.video_url %}
+                                         <img src="/media/{{ i.background_url }}" alt="Carousel Image" class="indicator-thumbnail" loading="lazy">
+                                         {% elif i.link %}
+                                         <img src="https://img.youtube.com/vi/{{ i.video_id }}/mqdefault.jpg" alt="Thumbnail" class="indicator-thumbnail-img-youtube" loading="lazy">
+                                      {% endif %}
+                                   </div>
+                                   {% endfor %}
+                                </div>
+                             </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <section class="overflow-hidden content-div" id="bts-kelowna">
+            <div class="row">
+               <div class="col-12">               
+                  <div class="trending-custom-tab">
+                     <div class="trending-content p-0">
+                        <div id="trending-data1" class="overview-tab tab-pane fade active show">
+                           <div class="trending-info align-items-center w-100 animated fadeInUp">
+                                    <div id="carouselExampleControlsKelownaM" class="carousel slide">
+                                        <div class="carousel-inner">
+                                            {% for i in all_videos %}
+                                            <div class="carousel-item {% if forloop.counter == 1 %}active{% endif %}">
+                                                <div class="supported_card position-relative d-md-flex align-items-center bg-black">
+                                                   <div class="supported_inner position-relative overflow-hidden">
+                                                      <h4 class="text-theme mb-0 text-white text-content-m">
+                                                            {{ i.content }}
+                                                      </h4>
+                                                   </div>
+        
+                                                   {% if i.image_url %}
+                                                   <!-- Show image if image_url exists -->
+                                                   <img src="/media/{{ i.image_url }}" alt="Carousel Image"  width="100%" height="200" loading="lazy">
+                                                   {% elif i.video_url %}
+                                                    <!-- Show video if video_url exists -->
+                                                    <video class="yvideo" src="/media/{{ i.video_url }}" controls loading="lazy"></video>
+                                                    {% elif i.youtube_url %}
+                                                    <!-- Show YouTube iframe if youtube_url exists -->
+                                                    <iframe class="yvideo" width="100%" height="200" 
+                                                        src="{{ i.youtube_url }}?rel=0&enablejsapi=1" 
+                                                        title="YouTube Video" frameborder="0" 
+                                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy">
+                                                    </iframe>
+                                                    {% endif %}
+        
+                                                    <!-- Carousel controls -->
+                                                    <a class="carousel-control-prev-m" href="#carouselExampleControlsKelownaM" role="button" data-slide="prev" onClick="controlVideo('{{ forloop.counter0|add:0 }}','data-kelowna-m')" style="left: 0;">
+                                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                        <span class="sr-only">Previous</span>
+                                                    </a>
+                                                    <a class="carousel-control-next-m" href="#carouselExampleControlsKelownaM" role="button" data-slide="next" onClick="controlVideo('{{ forloop.counter0|add:0 }}','data-kelowna-m')" style="right: 0;">
+                                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                        <span class="sr-only">Next</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            {% endfor %}
+                                        </div>
+        
+                                        <!-- Spacing -->
+                                        <div class="spacer bg-white " style="height: 15px;"></div>
+        
+                                        <!-- Carousel Indicators -->
+                                        <div class="carousel-indicators-slide d-flex owl-carousel">
+                                          {% for i in all_videos %}
+                                          <div class="indicator-wrapper data-kelowna-m" data-target="#carouselExampleControlsKelownaM" id="data-kelowna-m-{{ forloop.counter0 }}" data-slide-to="{{ forloop.counter0 }}" onClick="controlVideo('{{ forloop.counter0 }}','data-kelowna-m')">
+                                             {% if i.image_url %}
+                                                <img src="/media/{{ i.image_url }}" alt="Carousel Image" class="indicator-thumbnail" loading="lazy">
+                                             {% elif i.video_url %}
+                                                <video src="/media/{{ i.video_url }}" alt="Thumbnail" class="indicator-thumbnail" loading="lazy"></video>
+                                             {% elif i.youtube_url %}
+                                                <img src="https://img.youtube.com/vi/{{ i.video_id }}/mqdefault.jpg" alt="Thumbnail" class="indicator-thumbnail-img-youtube" loading="lazy">
+                                             {% endif %}
+                                          </div>
+                                          {% endfor %}
+                                       </div>
+                                    </div>
+                                </div>
+                            </div>
+                         </div>
+                      </div>
+                   </div>
+                </div>
+         </section>
+        
+         <section class="overflow-hidden  content-div" id="bts-aldergrove">
+            <div class="row">
+               <div class="col-12">
+                  <div class="trending-custom-tab">
+                        <div class="trending-content p-0">
+                           <div id="trending-data1" class="overview-tab tab-pane fade active show">
+                              <div class="trending-info align-items-center w-100 animated fadeInUp">
+                                    <div id="carouselExampleControlsAldergroveM" class="carousel slide">
+                                       <div class="carousel-inner">
+                                          {% for i in all_videos2 %}
+                                          <div class="carousel-item {% if forloop.counter == 1 %}active{% endif %}">
+                                                <div class="supported_card position-relative d-md-flex align-items-center bg-black">
+                                                   <div class="supported_inner position-relative overflow-hidden">
+                                                      <h4 class="text-theme mb-0 text-white text-content-m">
+                                                            {{ i.content }}
+                                                      </h4>
+                                                   </div>
+                                                   {% if i.image_url %}
+                                                   <!-- Show image if image_url exists -->
+                                                   <img src="/media/{{ i.image_url }}" alt="Carousel Image"  width="100%" height="200" loading="lazy">
+                                                   {% elif i.video_url %}
+                                                    <!-- Show video if video_url exists -->
+                                                   <video class="yvideo" src="/media/{{ i.image_url }}" controls loading="lazy"></video>
+                                                   {% elif i.youtube_url %}
+                                                   <iframe class="yvideo" width="100%" height="200" 
+                                                      src="{{ i.youtube_url }}?rel=0&enablejsapi=1" 
+                                                      title="YouTube Video" frameborder="0" 
+                                                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                                      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy">
+                                                   </iframe>
+                                                   {% endif %}
+      
+                                                   <a class="carousel-control-prev-m" href="#carouselExampleControlsAldergroveM" role="button" data-slide="prev" onClick="controlVideo('{{ forloop.counter0|add:0 }}','data-aldergrove-m');" style="left: 0;">
+                                                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                      <span class="sr-only">Previous</span>
+                                                   </a>
+                                                   <a class="carousel-control-next-m" href="#carouselExampleControlsAldergroveM" role="button" data-slide="next" onClick="controlVideo('{{ forloop.counter0|add:0 }}','data-aldergrove-m');" style="right: 0;">
+                                                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                      <span class="sr-only">Next</span>
+                                                   </a>
+                                                </div>
+                                          </div>
+                                          {% endfor %}
+                                       </div>
+      
+                                       <div class="spacer bg-white" style="height: 15px;"></div>
+      
+                                       <div class="carousel-indicators-slide d-flex owl-carousel">
+                                          {% for i in all_videos2 %}
+                                          <div class="indicator-wrapper data-aldergrove-m" data-target="#carouselExampleControlsAldergroveM" id="data-aldergrove-m-{{ forloop.counter0 }}" data-slide-to="{{ forloop.counter0 }}" onClick="controlVideo('{{ forloop.counter0 }}','data-aldergrove-m');">
+                                             {% if i.image_url %}
+                                                <img src="/media/{{ i.image_url }}" alt="Carousel Image" class="indicator-thumbnail" loading="lazy">
+                                             {% elif i.video_url %}
+                                                <video src="/media/{{ i.image_url }}" alt="Thumbnail" class="indicator-thumbnail" loading="lazy"></video>
+                                             {% elif i.youtube_url %}
+                                                <img src="https://img.youtube.com/vi/{{ i.video_id }}/mqdefault.jpg" alt="Thumbnail" class="indicator-thumbnail-img-youtube" loading="lazy">
+                                             {% endif %}
+                                          </div>
+                                          {% endfor %}
+                                       </div>
+                                    </div>
+                              </div>
+                           </div>
+                        </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+     
+         <section class="overflow-hidden  content-div" id="bts-maple-ridge">
+            <div class="row">
+               <div class="col-12">
+                  <div class="trending-custom-tab">
+                        <div class="trending-content p-0">
+                           <div id="trending-data1" class="overview-tab tab-pane fade active show">
+                              <div class="trending-info align-items-center w-100 animated fadeInUp">
+                                    <div id="carouselExampleControlsMapleRidgeM" class="carousel slide">
+                                       <div class="carousel-inner">
+                                          {% for i in all_videos3 %}
+                                          <div class="carousel-item {% if forloop.counter == 1 %}active{% endif %}">
+                                                <div class="supported_card position-relative d-md-flex align-items-center bg-black">
+                                                   <div class="supported_inner position-relative overflow-hidden">
+                                                      <h4 class="text-theme mb-0 text-white text-content-m">
+                                                            {{ i.content }}
+                                                      </h4>
+                                                   </div>
+                                                   {% if i.image_url %}
+                                                      <img src="/media/{{ i.image_url }}" alt="Carousel Image"  width="100%" height="200" loading="lazy">
+                                                   {% elif i.video_url %}
+                                                      <video class="yvideo" src="/media/{{ i.image_url }}" controls  loading="lazy"></video>
+                                                   {% elif i.youtube_url %}
+                                                   <iframe class="yvideo" width="100%" height="200" 
+                                                      src="{{ i.youtube_url }}?rel=0&enablejsapi=1" 
+                                                      title="YouTube Video" frameborder="0" 
+                                                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                                      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy">
+                                                   </iframe>
+                                                   {% endif %}
+      
+                                                   <!-- Carousel Controls -->
+                                                   <a class="carousel-control-prev-m" href="#carouselExampleControlsMapleRidgeM" role="button" data-slide="prev" onClick="controlVideo('{{ forloop.counter0|add:0 }}','data-mapleridge-m');" style="left: 0;">
+                                                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                      <span class="sr-only">Previous</span>
+                                                   </a>
+                                                   <a class="carousel-control-next-m" href="#carouselExampleControlsMapleRidgeM" role="button" data-slide="next" onclick="controlVideo('{{ forloop.counter0|add:0 }}','data-mapleridge-m');" style="right: 0;">
+                                                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                      <span class="sr-only">Next</span>
+                                                   </a>
+                                                </div>
+                                          </div>
+                                          {% endfor %}
+                                       </div>
+      
+                                       <!-- Spacer -->
+                                       <div class="spacer bg-white" style="height: 15px;"></div>
+      
+                                       <!-- Carousel Indicators -->
+                                       <div class="carousel-indicators-slide d-flex owl-carousel">
+                                          {% for i in all_videos3 %}
+                                          <div class="indicator-wrapper data-mapleridge-m" data-target="#carouselExampleControlsMapleRidgeM" id="data-mapleridge-m-{{ forloop.counter0 }}" data-slide-to="{{ forloop.counter0 }}" onClick="controlVideo('{{ forloop.counter0 }}','data-mapleridge-m');">
+                                             {% if i.image_url %}
+                                                <img src="/media/{{ i.image_url }}" alt="Carousel Image" class="indicator-thumbnail" loading="lazy">
+                                             {% elif i.video_url %}
+                                                <video src="/media/{{ i.image_url }}" alt="Thumbnail" class="indicator-thumbnail" loading="lazy"></video>
+                                             {% elif i.youtube_url %}
+                                                <img src="https://img.youtube.com/vi/{{ i.video_id }}/mqdefault.jpg" alt="Thumbnail" class="indicator-thumbnail-img-youtube" loading="lazy">
+                                             {% endif %}
+                                          </div>
+                                          {% endfor %}
+                                       </div>
+                                    </div>
+                              </div>
+                           </div>
+                        </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+      </section>
+
+
+      <section class="trending-tab-bg" id="vdo-trailer">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-12">             
+                  <div class="trending-custom-tab">
+                     <div class="tab-title-info position-relative">
+                        <ul class="trending-pills d-flex nav nav-pills justify-content-center align-items-center text-center"
+                           role="tablist">
+                           <li class="nav-item">
+                              <a class="nav-link text-secondary" href="#trailers">Trailers</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link text-secondary">Media</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link text-secondary">Cast & Crew</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link text-secondary" href="#bts-kelowna">BTS Kelowna</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link text-secondary" href="#bts-aldergrove">BTS Aldergrove</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link text-secondary" href="#bts-maple-ridge">BTS Maple Ridge</a>
+                           </li>
+                           <!-- <li class="nav-item">
+                              <a class="nav-link text-secondary">BTS Kelowna</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link text-secondary">BTS Aldergrove</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link text-secondary">BTS Maple Ridge</a>
+                           </li> -->
+                           <li class="nav-item">
+                              <a class="nav-link text-secondary">Story</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link text-secondary">Share</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link text-secondary">Support</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link text-secondary">Learn</a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      
+         <section class="overflow-hidden" id="trailers">
+            <div class="row">
+               <div class="col-12">               
+                  <div class="trending-custom-tab">
+                     <div class="trending-content p-0">
+                        <div id="trending-data1" class="overview-tab tab-pane fade active show">
+                           <div class="trending-info align-items-center w-100 animated fadeInUp"> 
+                              <div id="carouselExampleControlsTrailers" class="carousel slide" data-interval="false">
+                                 <div class="carousel-inner">
+                                     {% for i in all_video %}
+                                     <div class="carousel-item {% if forloop.counter == 1 %}active{% endif %}">
+                                         <div class="supported_card position-relative d-md-flex align-items-center bg-black">
+                                            {% if i.video_url %}
+                                             <!-- Show video if video_url exists -->
+                                             <div class="video-container" style="display: block; object-fit: contain;user-select: none;width: 100%; height: auto;">
+                                                <video class="videoPlayer" controls preload="none" controlslist="nodownload" style="width: 100%; height: 858px;" poster="media/{{ i.background_url }}">
+                                                   <source src="https://promisesmovie.blob.core.windows.net/media/{{ i.video_url }}?sp=r&st=2025-01-27T19:30:06Z&se=2050-01-28T03:30:06Z&spr=https&sv=2022-11-02&sr=c&sig=PjVd%2Fd%2BpVAxDFIWtr7P0wCox6%2FEXQHQ2SBKlbZ26ppU%3D" type="video/mp4">   
+                                                </video>
+                                                <div class="controls">
+                                                   <button class="control-btn" onClick="rewind()">⏪</button>
+                                                   <button class="fullscreen-btn" onClick="enableFullscreenRequests()">⛶</button>
+                                                   <button class="control-btn" onClick="forward()">⏩</button>
+                                                </div>
+                                             </div>
+                                             {% elif i.link %}
+                                             <!-- Show YouTube iframe if link exists -->
+                                             <iframe width="100%" height="750" src="{{ video.link }}" frameborder="0" allow="accelerometer;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin-bottom: -6px;"></iframe>
+                                             {% endif %}
+ 
+                                             <!-- Carousel controls -->
+                                             <a class="carousel-control-prev controlsPrev-{{ forloop.counter0 }}" href="#carouselExampleControlsTrailers" role="button" data-slide="prev" onClick="controlVideo('{{ forloop.counter0|add:0 }}','data-trailers','prev')">
+                                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                 <span class="sr-only">Previous</span>
+                                             </a>
+                                             <a class="carousel-control-next controlsNext-{{ forloop.counter0 }}" href="#carouselExampleControlsTrailers" role="button" data-slide="next" onClick="controlVideo('{{ forloop.counter0|add:0 }}','data-trailers','next')">
+                                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                 <span class="sr-only">Next</span>
+                                             </a>
+                                         </div>
+                                     </div>
+                                     {% endfor %}
+                                 </div>
+ 
+                                 <!-- Spacing -->
+                                 <!-- <div class="spacer bg-white " style="height: 15px;"></div> -->
+ 
+                                 <!-- Carousel Indicators -->
+                                 <div class="carousel-indicators-slide-s d-flex owl-carousel">
+                                   {% for i in all_video %}
+                                   <div class="indicator-wrapper data-trailers" data-target="#carouselExampleControlsTrailers" id="data-trailers-{{ forloop.counter0 }}" data-slide-to="{{ forloop.counter0 }}" onClick="controlVideo('{{ forloop.counter0 }}','data-trailers')">
+                                      {% if i.video_url %}
+                                         <img src="/media/{{ i.background_url }}" alt="Carousel Image" class="indicator-thumbnail" loading="lazy">
+                                         {% elif i.link %}
+                                         <img src="https://img.youtube.com/vi/{{ i.video_id }}/mqdefault.jpg" alt="Thumbnail" class="indicator-thumbnail-img-youtube" loading="lazy">
+                                      {% endif %}
+                                   </div>
+                                   {% endfor %}
+                                </div>
+                             </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <section class="overflow-hidden" id="bts-kelowna" style="display: none;">
+            <div class="row">
+                <div class="col-12">
+                    <div class="trending-custom-tab">
+                        <div class="trending-content p-0">
+                            <div id="trending-data1" class="overview-tab tab-pane fade active show">
+                                <div class="trending-info align-items-center w-100 animated fadeInUp">
+                                    <div id="carouselExampleControlsKelowna" class="carousel slide">
+                                        <div class="carousel-inner">
+                                            {% for i in all_videos %}
+                                            <div class="carousel-item {% if forloop.counter == 1 %}active{% endif %}">
+                                                <div class="supported_card position-relative d-md-flex align-items-center bg-black">
+                                                   <div class="supported_inner position-relative overflow-hidden">
+                                                      <h4 class="text-theme mb-0 ml-4 text-white text-content">
+                                                            {{ i.content }}
+                                                      </h4>
+                                                   </div>
+        
+                                                   {% if i.image_url %}
+                                                   <!-- Show image if image_url exists -->
+                                                   <img src="/media/{{ i.image_url }}" alt="Carousel Image"  width="75%" height="750" loading="lazy">
+                                                   {% elif i.video_url %}
+                                                    <!-- Show video if video_url exists -->
+                                                    <video class="yvideo" src="/media/{{ i.video_url }}" controls loading="lazy"></video>
+                                                    {% elif i.youtube_url %}
+                                                    <!-- Show YouTube iframe if youtube_url exists -->
+                                                    <iframe class="yvideo" width="75%" height="750" 
+                                                        src="{{ i.youtube_url }}?rel=0&enablejsapi=1" 
+                                                        title="YouTube Video" frameborder="0" 
+                                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy">
+                                                    </iframe>
+                                                    {% endif %}
+        
+                                                    <!-- Carousel controls -->
+                                                    <a class="carousel-control-prev" href="#carouselExampleControlsKelowna" role="button" data-slide="prev" onClick="controlVideo('{{ forloop.counter0|add:0 }}','data-kelowna','prev');">
+                                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                        <span class="sr-only">Previous</span>
+                                                    </a>
+                                                    <a class="carousel-control-next" href="#carouselExampleControlsKelowna" role="button" data-slide="next" onClick="controlVideo('{{ forloop.counter0|add:0 }}','data-kelowna','next');">
+                                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                        <span class="sr-only">Next</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            {% endfor %}
+                                        </div>
+        
+                                        <!-- Spacing -->
+                                        <div class="spacer bg-white " style="height: 15px;"></div>
+        
+                                        <!-- Carousel Indicators -->
+                                        <div class="carousel-indicators-slide d-flex owl-carousel">
+                                          {% for i in all_videos %}
+                                          <div class="indicator-wrapper data-kelowna" data-target="#carouselExampleControlsKelowna" id="data-kelowna-{{ forloop.counter0 }}" data-slide-to="{{ forloop.counter0 }}" onClick="controlVideo('{{ forloop.counter0 }}','data-kelowna');">
+                                             {% if i.image_url %}
+                                                <img src="/media/{{ i.image_url }}" alt="Carousel Image" class="indicator-thumbnail" loading="lazy">
+                                             {% elif i.video_url %}
+                                                <video src="/media/{{ i.video_url }}" alt="Thumbnail" class="indicator-thumbnail" loading="lazy"></video>
+                                             {% elif i.youtube_url %}
+                                                <img src="https://img.youtube.com/vi/{{ i.video_id }}/mqdefault.jpg" alt="Thumbnail" class="indicator-thumbnail-img-youtube" loading="lazy">
+                                             {% endif %}
+                                          </div>
+                                          {% endfor %}
+                                       </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </section>
+        
+         <section class="overflow-hidden" id="bts-aldergrove" style="display: none;">
+            <div class="row">
+               <div class="col-12">
+                  <div class="trending-custom-tab">
+                        <div class="trending-content p-0">
+                           <div id="trending-data1" class="overview-tab tab-pane fade active show">
+                              <div class="trending-info align-items-center w-100 animated fadeInUp">
+                                    <div id="carouselExampleControlsAldergrove" class="carousel slide">
+                                       <div class="carousel-inner">
+                                          {% for i in all_videos2 %}
+                                          <div class="carousel-item {% if forloop.counter == 1 %}active{% endif %}">
+                                                <div class="supported_card position-relative d-md-flex align-items-center bg-black">
+                                                   <div class="supported_inner position-relative overflow-hidden">
+                                                      <h4 class="text-theme mb-0 ml-4 text-white text-content">
+                                                            {{ i.content }}
+                                                      </h4>
+                                                   </div>
+                                                   {% if i.image_url %}
+                                                   <!-- Show image if image_url exists -->
+                                                   <img src="/media/{{ i.image_url }}" alt="Carousel Image"  width="75%" height="750" loading="lazy">
+                                                   {% elif i.video_url %}
+                                                    <!-- Show video if video_url exists -->
+                                                   <video class="yvideo" src="/media/{{ i.image_url }}" controls loading="lazy"></video>
+                                                   {% elif i.youtube_url %}
+                                                   <iframe class="yvideo" width="75%" height="750" 
+                                                      src="{{ i.youtube_url }}?rel=0&enablejsapi=1" 
+                                                      title="YouTube Video" frameborder="0" 
+                                                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                                      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy">
+                                                   </iframe>
+                                                   {% endif %}
+      
+                                                   <a class="carousel-control-prev" href="#carouselExampleControlsAldergrove" role="button" data-slide="prev" onClick="controlVideo('{{ forloop.counter0|add:0 }}','data-aldergrove','prev');">
+                                                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                      <span class="sr-only">Previous</span>
+                                                   </a>
+                                                   <a class="carousel-control-next" href="#carouselExampleControlsAldergrove" role="button" data-slide="next" onClick="controlVideo('{{ forloop.counter0|add:0 }}','data-aldergrove','next');">
+                                                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                      <span class="sr-only">Next</span>
+                                                   </a>
+                                                </div>
+                                          </div>
+                                          {% endfor %}
+                                       </div>
+      
+                                       <div class="spacer bg-white" style="height: 15px;"></div>
+      
+                                       <div class="carousel-indicators-slide d-flex owl-carousel">
+                                          {% for i in all_videos2 %}
+                                          <div class="indicator-wrapper data-aldergrove" data-target="#carouselExampleControlsAldergrove" id="data-aldergrove-{{ forloop.counter0 }}" data-slide-to="{{ forloop.counter0 }}" onClick="controlVideo('{{ forloop.counter0 }}','data-aldergrove');">
+                                             {% if i.image_url %}
+                                                <img src="/media/{{ i.image_url }}" alt="Carousel Image" class="indicator-thumbnail" loading="lazy">
+                                             {% elif i.video_url %}
+                                                <video src="/media/{{ i.image_url }}" alt="Thumbnail" class="indicator-thumbnail" loading="lazy"></video>
+                                             {% elif i.youtube_url %}
+                                                <img src="https://img.youtube.com/vi/{{ i.video_id }}/mqdefault.jpg" alt="Thumbnail" class="indicator-thumbnail-img-youtube" loading="lazy">
+                                             {% endif %}
+                                          </div>
+                                          {% endfor %}
+                                       </div>
+                                    </div>
+                              </div>
+                           </div>
+                        </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+     
+         <section class="overflow-hidden" id="bts-maple-ridge" style="display: none;">
+            <div class="row">
+               <div class="col-12">
+                  <div class="trending-custom-tab">
+                        <div class="trending-content p-0">
+                           <div id="trending-data1" class="overview-tab tab-pane fade active show">
+                              <div class="trending-info align-items-center w-100 animated fadeInUp">
+                                    <div id="carouselExampleControlsMapleRidge" class="carousel slide">
+                                       <div class="carousel-inner">
+                                          {% for i in all_videos3 %}
+                                          <div class="carousel-item {% if forloop.counter == 1 %}active{% endif %}">
+                                                <div class="supported_card position-relative d-md-flex align-items-center bg-black">
+                                                   <div class="supported_inner position-relative overflow-hidden">
+                                                      <h4 class="text-theme mb-0 ml-4 text-white text-content">
+                                                            {{ i.content }}
+                                                      </h4>
+                                                   </div>
+                                                   {% if i.image_url %}
+                                                      <img src="/media/{{ i.image_url }}" alt="Carousel Image"  width="75%" height="750" loading="lazy">
+                                                   {% elif i.video_url %}
+                                                      <video class="yvideo" src="/media/{{ i.image_url }}" controls loading="lazy"></video>
+                                                   {% elif i.youtube_url %}
+                                                   <iframe class="yvideo" width="75%" height="750" 
+                                                      src="{{ i.youtube_url }}?rel=0&enablejsapi=1" 
+                                                      title="YouTube Video" frameborder="0" 
+                                                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                                      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy">
+                                                   </iframe>
+                                                   {% endif %}
+      
+                                                   <!-- Carousel Controls -->
+                                                   <a class="carousel-control-prev" href="#carouselExampleControlsMapleRidge" role="button" data-slide="prev" onClick="controlVideo('{{ forloop.counter0|add:0 }}','data-mapleridge','prev');">
+                                                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                      <span class="sr-only">Previous</span>
+                                                   </a>
+                                                   <a class="carousel-control-next" href="#carouselExampleControlsMapleRidge" role="button" data-slide="next" onClick="controlVideo('{{ forloop.counter0|add:0 }}','data-mapleridge','next');">
+                                                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                      <span class="sr-only">Next</span>
+                                                   </a>
+                                                </div>
+                                          </div>
+                                          {% endfor %}
+                                       </div>
+      
+                                       <!-- Spacer -->
+                                       <div class="spacer bg-white" style="height: 15px;"></div>
+      
+                                       <!-- Carousel Indicators -->
+                                       <div class="carousel-indicators-slide d-flex owl-carousel">
+                                          {% for i in all_videos3 %}
+                                          <div class="indicator-wrapper data-mapleridge" data-target="#carouselExampleControlsMapleRidge" id="data-mapleridge-{{ forloop.counter0 }}" data-slide-to="{{ forloop.counter0 }}" onClick="controlVideo('{{ forloop.counter0 }}','data-mapleridge');">
+                                             {% if i.image_url %}
+                                                <img src="/media/{{ i.image_url }}" alt="Carousel Image" class="indicator-thumbnail" loading="lazy">
+                                             {% elif i.video_url %}
+                                                <video src="/media/{{ i.image_url }}" alt="Thumbnail" class="indicator-thumbnail" loading="lazy"></video>
+                                             {% elif i.youtube_url %}
+                                                <img src="https://img.youtube.com/vi/{{ i.video_id }}/mqdefault.jpg" alt="Thumbnail" class="indicator-thumbnail-img-youtube" loading="lazy">
+                                             {% endif %}
+                                          </div>
+                                          {% endfor %}
+                                       </div>
+                                    </div>
+                              </div>
+                           </div>
+                        </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+      </section>
+
+      <section class="overflow-hidden sponsor-wrp sw py-5 bg-white position-relative mt-4" style="background: url('/static/images/tri-sponsor.png') no-repeat; background-position: top right; background-size: 50%;">
+         <div class="container">
+            <div class="row supported_wrp mb-0 clearfix">
+               <div class="col-12 col-md-12 col-lg-6">
+                  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="6000">
+                    <div class="carousel-inner">
+                       {% for i in sponsoredblockfour_obj%}
+                      <div class="carousel-item {% if forloop.counter == 1 %}active {% endif %}">
+                        <div class="supported_card position-relative d-md-flex align-items-center">
+                           <img src="/media/{{ i.image }}" class="img-fluid logo-batch" width="150">
+                           <div class="supported_inner position-relative overflow-hidden">
+                              <h3 class="text-theme mb-0 ml-4">{{i.name}}<br>{{i.name2}}:<br>{{i.name3}}</h3>
+                           </div>
+                        </div>
+                      </div>
+                      {% endfor %}
+                    </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      
+      <section class="sign-in-page position-relative py-5 form-bw border-top">
+         <div class="container">
+            <div class="row justify-content-center height-self-center my-5">
+               <div class="col-lg-6 col-md-12 align-self-center">
+                  <div class="sign-user_card p-3 p-md-5 mb-4 mb-md-0">                
+                     <div class="sign-in-page-data">
+                        <div class="sign-in-from w-100 m-auto">
+                           <h3 class="mb-3 text-center">Connect With Us</h3>
+                           <form class="mt-4" method="POST">
+                              {% csrf_token %}
+                              <div class="form-group">                                 
+                                 <input type="text" class="form-control mb-0" id="exampleInputEmail2" name="name" placeholder="Full Name" autocomplete="off" required>
+                              </div>
+                              <div class="form-group">                                 
+                                 <input type="email" class="form-control mb-0" id="exampleInputEmail3" name="email" placeholder="Email" autocomplete="off" required>
+                              </div>
+                              <div class="form-group">                                 
+                                 <input type="text" class="form-control mb-0" id="exampleInputEmail3" name="number" placeholder="Phone Number" autocomplete="off" required>
+                              </div> 
+                              <div class="form-group">                                 
+                                 <textarea type="text" class="form-control mb-0" id="exampleInputEmail3" name="messages" placeholder="Message" autocomplete="off" required></textarea>
+                              </div> 
+                              <!-- <div class="custom-control custom-checkbox mb-3">
+                                 <input type="checkbox" class="custom-control-input" onchange="check();" id="customCheck">
+                                 <label class="custom-control-label" for="customCheck">I accept <a href="#" class="text-warning"> Terms and Conditions</a></label>
+                              </div> -->
+                              <!-- <div class="custom-control custom-checkbox mb-3">
+                                 <input type="checkbox" class="custom-control-input" id="customCheck">
+                                 <label class="custom-control-label" for="customCheck">I accept <a href="#" class="text-warning"> Terms and Conditions</a></label>
+                              </div> -->
+                                 
+                              <button type="submit" class="btn btn-hover">Submit</button>
+                                                                  
+                           </form>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+         
+      </section>
+      
+      <section class="bg-dark position-relative pt-3 pb-4">
+         <div class="container">
+            <div class="row justify-content-center height-self-center">
+               <div class="col-lg-5 col-md-12">
+                  <div class="sign-view text-center">
+                     <a href="http://www.imfc.org/" target="_blank"><img src="{% static 'images/mb.png' %}" class="img-fluid"></a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <section class="overflow-hidden maintopic text-center py-3 bg-theme">
+         <div class="container">
+            <div class="row">
+               <div class="col-12"> 
+                  <h3 class="text-white">Gold Shield Heritage Defenders</h3>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <section class="overflow-hidden sponsor-wrp py-1 bg-white position-relative">
+         <div class="container">
+            <div class="row my-5 clearfix">
+               <div class="col-12"> 
+                  <div class="tvthrillers-contens">
+                     <ul class="favorites-slider list-inline row p-0 mb-0">
+                        {% for i in sponsoredblocktwo_obj %}
+                        <li class="slide-item">
+                           <div class="block-images text-center position-relative">
+                              <div class="img-box">
+                                 <img src="/media/{{ i.image }}" class="img-fluid d-inline-block" alt="" width="150">
+                              </div>
+                           </div>
+                        </li>
+                        {% endfor %}
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+   
+   {% if messages %}
+   {% for message in messages %}
+   <div class="text-center">
+   <div class="alert alert-primary alert-dismissible fade show text-center d-inline-flex" role="alert">
+      <strong>{{ message }}</strong> .
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+   </div>
+   {% endfor %}
+   {% endif %}
+
+   <section class="mb-0 text-center">
+      <div class="container-fluid">
+         <div class="block-space">
+            <div class="row justify-content-center">
+               <div class="col-lg-6 col-md-12">
+                  <div class="trending-info align-items-center w-100 animated fadeInUp">
+                     <h1 class="trending-text big-title text-uppercase">Promises.movie</h1>
+                     <p class="trending-dec text-light w-100">"Promises will remind us that in the past, in duty to a common citizenship, we stood united in the face of tyranny and hate. If race, colour, language differences are being stoked today to intimidate, exclude and divide, it becomes all the more important to remember that it was together we overcame and defeated the greatest of evils."<br><br>
+                        Steve Purewal<br>
+                        Surrey, BC, Canada<br>
+                        Author Duty Honour & Izzat<br>
+                        Producer & Director Promises
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <section class="overflow-hidden text-center py-3 blue-ribbon-bg">
+      <div class="container">
+         <div class="row">
+            <div class="col-12"> 
+               <h3 class="blue-ribbon-text">Blue Ribbon Heritage Defenders</h3>
+            </div>
+         </div>
+      </div>
+   </section>
+   
+   <section class="overflow-hidden blue-ribbon sponsor-wrp py-1 bg-white position-relative">
+      <div class="container">
+         <div class="row my-5">
+            <div class="col-12"> 
+               <div class="tvthrillers-contens">
+                  <ul class="favorites-slider sponsors-slider list-inline row p-0 mb-0">
+                     
+                     {% for i in sponsoredblockthree_obj %}
+                        <li class="slide-item">
+                        
+                           <div class="block-images text-center position-relative">
+                              <div class="img-box">
+                                 <img src="/media/{{ i.image }}" class="img-fluid d-inline-block" alt="" width="150">
+                              </div>
+                           </div>
+                          
+                        </li>
+                        {% endfor %}
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   
+<footer class="mb-0 py-4 text-center">
+   <div class="container-fluid">
+      <div class="block-space">
+         <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-12">
+               <div class="d-flex justify-content-center mb-3">
+                     <a href="https://www.facebook.com/IndusMediaFoundation/" target="_blank" class="s-icon">
+                     <i class="ri-facebook-fill"></i>
+                     </a>
+                     <a href="https://x.com/induscanada" target="_blank" class="s-icon">
+                     <img src="{% static 'images/twitter-w.png' %}" class="img-fluid" width="32">
+                     <!-- <i class="ri-twitter-fill"></i> -->
+                     </a>
+                     <a href="https://www.youtube.com/channel/UCPrYjKlrHo-CcJDgdwCfVTg" target="_blank" class="s-icon">
+                     <i class="ri-youtube-fill"></i>
+                     </a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="copyright">
+      <div class="container-fluid">
+         <p class="mb-0 text-center text-body">© <strong>Indus Media Foundation.</p>
+      </div>
+   </div>
+</footer>
+
+   <!-- MainContent End-->
+   <style>
+   .ui-state-active,
+   .ui-widget-content .ui-state-active,
+   .ui-widget-header .ui-state-active,
+   a.ui-button:active,
+   .ui-button:active,
+   .ui-button.ui-state-active:hover {
+      background: #fff;
+      font-weight: normal;
+      color: #ffffff;
+   }
+   .alert.alert-primary {
+      position: fixed;
+      top: 15rem;
+      left: 50%;
+      z-index: 9999;
+      transform: translateX(-50%);
+      width: 300px;
+      max-width: 100%;
+   }
+   @media screen and (max-width: 575px) {
+   .alert.alert-primary {
+      top: 5rem;
+   }
+   }
+
+   .carousel-indicators-slide {
+   /* padding: 5px; */
+   background: #000;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   }
+
+   .carousel-indicators-slide-s {
+      padding-bottom: 4px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+
+   video { 
+      display: block; 
+      width: 75%; 
+      height: 750px; 
+   }
+
+   .bg-black {
+   background-color: black;
+   }
+
+   .text-white {
+      color: #fff !important;
+   }
+
+   .text-content {
+      color: #fff !important;
+      width: 370px; 
+      padding-right: 40px; 
+      text-align: justify;
+   }
+
+   .indicator-wrapper {
+      padding: 0 5px;
+   }
+
+   .indicator-thumbnail {
+      width: 100%;
+      height: 70px;
+      object-fit: cover;
+      margin-top: 10px;
+      margin-bottom: 5px;
+   }
+
+   .indicator-thumbnail-img-youtube {
+      width: 100%;
+      object-fit: cover;
+      margin-bottom: 5px;
+      height: 80px;
+      margin-top: 5px;
+   }
+
+   .spacer {
+      height: 15px;
+      background-color: #fff;
+      margin-top: 1rem;
+      margin-bottom: 0rem;
+   }
+
+   .owl-carousel .owl-nav button.owl-prev,
+   .owl-carousel .owl-nav button.owl-next {
+      z-index: 1;
+      width: 30px;
+      height: 30px;
+      background-color: #ccc;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translatey(-50%);
+   }
+
+   .owl-carousel .owl-nav button.owl-prev {
+      left: 0;
+   }
+   .owl-carousel .owl-nav button.owl-next {
+      right: 0;
+   }
+
+   .owl-item img{
+      display:block;
+      width:100%;
+      opacity: 0.5;
+   }
+   .owl-item video{
+      display:block;
+      width:100%;
+      opacity: 0.5;
+   }
+   .carousel-control-next-icon, .carousel-control-prev-icon {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      /* background: transparent no-repeat center center; */
+      background-size: 100% 100%;
+   }
+
+   .carousel-control-prev {
+      margin-left: 420px; 
+      width: 2%; 
+      height: 30px; 
+      margin-top: 375px;
+      opacity: 1.0;
+   }
+
+   .carousel-control-next {
+      margin-right: 35px; 
+      width: 2%; 
+      height: 30px; 
+      margin-top: 375px;
+      opacity: 1.0;
+   }
+
+   #carouselExampleControlsTrailers .carousel-control-prev {
+      margin-left: 15px; 
+      width: 2%; 
+      height: 30px; 
+      margin-top: 375px;
+      opacity: 1.0;
+   }
+
+   #carouselExampleControlsTrailers .carousel-control-next {
+      margin-right: 25px; 
+      width: 2%; 
+      height: 30px; 
+      margin-top: 375px;
+      opacity: 1.0;
+   }
+
+   .carousel-control-next-m, .carousel-control-prev-m {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-align: center;
+      align-items: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      width: 15%;
+      color: #fff;
+      text-align: center;
+      opacity: 1;
+   }
+
+   #videoPlayer::-webkit-media-controls-fullscreen-button {
+      display: none;
+   }
+
+   .videoPlayer::-webkit-media-controls-fullscreen-button {
+      display: none;
+   }
+   
+   .controls {
+      position: absolute;
+      bottom: 30px;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 15%;
+      margin-right: 15%;
+      z-index: 1000;
+   }
+
+   .control-btn {
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 18px;
+   }
+
+   .control-btn:hover {
+      background: rgba(0, 0, 0, 0.8);
+   }
+
+   .fullscreen-btn {
+      font-size: 23px;
+      font-weight: bold;
+      background-color: transparent;
+      border: none;
+      color: white;
+      cursor: pointer;
+   }
+
+   #videoContainer.fullscreen-mode .controls {
+      position: fixed;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+   }
+
+   .dropdown {
+      margin-bottom: 20px;
+   }
+
+   .dropdown select {
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 4px;
+      background-color: #fff;
+      border: solid 1px #cccccc;
+      text-align: left;
+      padding: 7.5px 15px;
+      color: #215968;
+      width: 100%;
+      margin-top: 20px;
+      position: relative;
+   }
+
+   .content-div {
+      display: none; /* Hide all divs initially */
+      padding: 20px;
+      margin-top: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      background-color: #f9f9f9;
+   }
+
+   .content-div.active {
+      display: block; /* Show only the active div */
+   }
+   </style>
+   <!-- back-to-top -->
+   <div id="back-to-top">
+      <a class="top" href="#top" id="top"> <i class="fa fa-angle-up"></i> </a>
+   </div>
+   <!-- back-to-top End -->
+
+   <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+   <script src="{% static 'js/popper.min.js' %}"></script>
+   <script src="{% static 'js/bootstrap.min.js' %}"></script>
+   <script src="{% static 'js/slick.min.js' %}"></script>
+   <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+   <script src="{% static 'js/select2.min.js' %}"></script>
+   <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+   <script src="{% static 'js/slick-animation.min.js' %}"></script>
+   <script src="{% static 'js/custom.js' %}"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+   <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+
+   <script type="text/javascript">
+   $(function() {
+     $( "#vdo-trailer" ).tabs();
+   });
+
+   $(document).ready(function(){
+      $('#' + 'data-trailers-'+ 0 + ' img').css('opacity', 1);
+      $('#' + 'data-kelowna-'+ 0 + ' img').css('opacity', 1);
+      $('#' + 'data-kelowna-'+ 0 + ' video').css('opacity', 1);
+      $('#' + 'data-aldergrove-'+ 0 + ' img').css('opacity', 1);
+      $('#' + 'data-aldergrove-'+ 0 + ' video').css('opacity', 1);
+      $('#' + 'data-mapleridge-'+ 0 + ' img').css('opacity', 1);
+      $('#' + 'data-mapleridge-'+ 0 + ' video').css('opacity', 1);
+
+      $('#' + 'data-trailers-m-'+ 0 + ' img').css('opacity', 1);
+      $('#' + 'data-kelowna-m-'+ 0 + ' img').css('opacity', 1);
+      $('#' + 'data-kelowna-m-'+ 0 + ' video').css('opacity', 1);
+      $('#' + 'data-aldergrove-m-'+ 0 + ' img').css('opacity', 1);
+      $('#' + 'data-aldergrove-m-'+ 0 + ' video').css('opacity', 1);
+      $('#' + 'data-mapleridge-m-'+ 0 + ' img').css('opacity', 1);
+      $('#' + 'data-mapleridge-m-'+ 0 + ' video').css('opacity', 1);
+
+   });
+
+   function playHomeVideo() {
+      const video = document.querySelector('.videoPlayer');
+      if (video) {
+         document.getElementById("data-trailers-0").click();
+         video.play();
+      }
+      // const video = document.getElementsByClassName('videoPlayer')[0];
+      // video.play();
+   }
+
+   const videosHome = document.querySelectorAll('.home-video');
+   videosHome.forEach(video => {
+      video.muted = true; 
+      video.play().catch(err => {
+         console.error('Autoplay failed for video:', video, err);
+      });
+   });
+
+   function controlVideo(index,tabName,nextprev) {
+      let i = parseInt(index);
+      let count = document.querySelectorAll("." + tabName).length;
+
+      if (nextprev === 'next'){
+         if (i === 0) {
+            i = parseInt(index) + 1;
+         } 
+         else if (i === count - 1) {
+            i = 0;
+         }
+         else {
+            i = parseInt(index) + 1;
+         }
+      }
+      else if(nextprev === 'prev'){
+         if (i === 0) {
+            i = parseInt(index) + parseInt(count) - 1;
+         }
+         else if (i === count - 1) {
+            i = parseInt(index) - 1;
+         }
+         else {
+            i = parseInt(index) - 1;
+         }
+      }
+      else{
+         i = parseInt(index);
+      }
+
+      $('.owl-item .'+tabName+' img').css('opacity', 0.5);
+      $('.owl-item .'+tabName+' video').css('opacity', 0.5);
+      $('#' + tabName +'-'+ i + ' img').css('opacity', 1);
+      $('#' + tabName +'-'+ i + ' video').css('opacity', 1);
+
+      const videos = document.querySelectorAll('video');
+      videos.forEach((video) => {
+         video.pause();
+         video.currentTime = 0;
+      });
+
+      const iframes = document.querySelectorAll('iframe');
+      iframes.forEach((iframe) => {
+         const iframeSrc = iframe.src;
+         iframe.src = '';
+         iframe.src = iframeSrc;
+      });
+
+      const video = document.querySelector('.videoPlayer');
+      if (video) {
+         video.load();
+      }
+   }
+
+   </script>
+
+   <script type="text/javascript">
+      $(function(){
+      new WOW().init();
+      });
+   </script>
+   <script type="text/javascript">
+   
+      $(window).scroll(function(){
+      var scrollHeight = $(window).scrollTop();
+      if(scrollHeight > 50){
+         $("body").addClass("body-change");
+         
+      } else{
+         $("body").removeClass("body-change");
+      }
+
+      })
+      
+   </script>
+   <script>
+      $(document).ready(function(){
+      // Add smooth scrolling to all links
+         $(".smoothness").on('click', function(event) {
+            if (this.hash !== "") {
+               event.preventDefault();
+
+               var hash = this.hash;
+               $('html, body').animate({
+               scrollTop: $(hash).offset().top - 0
+               }, 800);
+            } 
+         });
+      });
+
+      $('.dropdown-menu li').on('click', function() {
+      var getValue = $(this).text();
+      $('.dropdown-select').text(getValue);
+      });
+   </script>
+
+   <script type="text/javascript">
+      $(window).scroll(function(){
+      var scrollHeight = $(window).scrollTop();
+      if(scrollHeight > 1650){
+      $(".sign-in-page").addClass("sign-change");
+      
+      } else{
+      $(".sign-in-page").removeClass("sign-change");
+      }
+      
+      })
+      </script>
+      
+      <script type="text/javascript">
+         jQuery('.sponsors-slider').slick({
+         autoplay: true,
+         autoplaySpeed: 2000,
+         dots: false,
+         arrows: true,
+         infinite: true,
+         speed: 300,
+         slidesToShow: 5,
+         slidesToScroll: 1,      
+         // appendArrows: $('#sm-slick-arrow'),
+         
+         nextArrow: '<a href="#" class="slick-arrow slick-next"><i class= "fa fa-chevron-right"></i></a>',
+         prevArrow: '<a href="#" class="slick-arrow slick-prev"><i class= "fa fa-chevron-left"></i></a>',
+         responsive: [
+         {
+            breakpoint: 1200,
+            settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: true
+            }
+         },
+         {
+            breakpoint: 768,
+            settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1
+            }
+         },
+         {
+            breakpoint: 480,
+            settings: {
+            // arrows: false,
+            slidesToShow: 1,
+            slidesToScroll: 1
+            }
+         }
+         ]
+      });
+
+      $(document).ready(function() {
+         $(".slick-carousel").slick({
+         infinite: true,
+         slidesToShow: 1,
+         slidesToScroll: 1,
+         arrows: true,
+         prevArrow: '<button class="slick-prev"><</button>',
+         nextArrow: '<button class="slick-next">></button>',
+         dots: true,
+         autoplay: true,
+         autoplaySpeed: 3000,
+         responsive: [
+               {
+                  breakpoint: 768,
+                  settings: {
+                     slidesToShow: 1,
+                     slidesToScroll: 1,
+                  },
+               },
+         ],
+         });
+      });
+
+      $(document).ready(function ($) {
+         $('.owl-carousel').owlCarousel({
+            loop: false,
+            margin: 0,
+            dots: false,
+            nav: true,
+            responsive: {
+               0: {
+                  items: 4
+               },
+               600: {
+                  items: 6
+               },
+               1000: {
+                  items: 12
+               }
+            }
+         });
+      });
+
+
+      document.querySelectorAll('.video-container').forEach((container, index) => {
+      const video = container.querySelector('.videoPlayer');
+      const controls = container.querySelector('.controls');
+      const controlsNext = document.querySelector('#carouselExampleControlsTrailers .controlsNext-'+ index);
+      const controlsPrev = document.querySelector('#carouselExampleControlsTrailers .controlsPrev-'+ index);
+
+      // Rewind function
+      function rewind() {
+         video.currentTime = Math.max(video.currentTime - 10, 0);
+         console.log(`Video ${index + 1} rewinded`);
+      }
+
+      // Forward function
+      function forward() {
+         video.currentTime = Math.min(video.currentTime + 10, video.duration);
+         console.log(`Video ${index + 1} forwarded`);
+      }
+
+      // Fullscreen toggle function
+      function enableFullscreenRequests() {
+         if (!document.fullscreenElement) {
+            if (container.requestFullscreen) {
+                  container.requestFullscreen();
+            } else if (container.webkitRequestFullscreen) {
+                  container.webkitRequestFullscreen(); // Safari
+            } else if (container.mozRequestFullScreen) {
+                  container.mozRequestFullScreen(); // Firefox
+            } else if (container.msRequestFullscreen) {
+                  container.msRequestFullscreen(); // IE
+            }
+            console.log(`Video ${index + 1} entered fullscreen`);
+         } else {
+            if (document.exitFullscreen) {
+                  document.exitFullscreen();
+            } else if (document.webkitExitFullscreen) {
+                  document.webkitExitFullscreen(); // Safari
+            } else if (document.mozCancelFullScreen) {
+                  document.mozCancelFullScreen(); // Firefox
+            } else if (document.msExitFullscreen) {
+                  document.msExitFullscreen(); // IE
+            }
+            console.log(`Video ${index + 1} exited fullscreen`);
+         }
+      }
+
+      // Handle double-click to toggle fullscreen
+      let clickTimeout;
+      video.onclick = (event) => {
+         console.log(`Clicked on Video ${index + 1}`);
+
+         if (clickTimeout) {
+            clearTimeout(clickTimeout);
+            clickTimeout = null;
+            enableFullscreenRequests();
+         } else {
+            clickTimeout = setTimeout(() => {
+                  clickTimeout = null;
+                  console.log(`Single click detected on Video ${index + 1}`);
+            }, 300);
+         }
+      };
+
+      // Show/hide controls on hover
+      container.addEventListener('mouseover', () => {
+         controls.style.display = 'flex';
+         // controlsNext.style.display = 'flex';
+         // controlsPrev.style.display = 'flex';
+      });
+
+      container.addEventListener('mouseout', () => {
+         if (!video.paused) {
+            controls.style.display = 'none';
+            // controlsNext.style.display = 'none';
+            // controlsPrev.style.display = 'none';
+         }
+      });
+
+      // Assign click events to the buttons inside this specific container
+      container.querySelector('.control-btn:nth-child(1)').onclick = rewind; // ⏪
+      container.querySelector('.fullscreen-btn').onclick = enableFullscreenRequests; // ⛶
+      container.querySelector('.control-btn:nth-child(3)').onclick = forward; // ⏩
+      });
+
+      function showDiv() {
+         const selectedValue = document.getElementById('dropdownMenu').value;
+         const allDivs = document.querySelectorAll('.content-div');
+         if(selectedValue=='trailer'){
+            $('.trailer-m').css('display', 'block');
+            allDivs.forEach(div => {
+               div.classList.remove('active');
+            });
+         }
+         else{
+         $('.trailer-m').css('display', 'none');
+         allDivs.forEach(div => {
+            div.classList.remove('active');
+         });
+
+         if (selectedValue) {
+            const selectedDiv = document.getElementById(selectedValue);
+            selectedDiv.classList.add('active');
+         }
+         }
+      }
+   </script>
+
+   </body>
+</html>

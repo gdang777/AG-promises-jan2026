@@ -1,0 +1,575 @@
+{% load static %}
+<!doctype html>
+<html lang="en-US">
+<head>
+   <!-- Required meta tags -->
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Promises</title>
+   <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" />
+   <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
+   <link rel="stylesheet" href="{% static 'css/typography.css' %}">
+   <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+   <link rel="stylesheet" href="{% static 'css/responsive.css' %}" />
+   <script>
+      function check(){
+         if($('#customCheck').is(":checked") == true){
+            $("#submit_button").prop('disabled', false);
+         }
+         else{
+            $("#submit_button").prop('disabled', true);
+            $("#submit_button").css('opacity') = '0.6';
+         }
+      }
+   </script>
+   <!-- Facebook Pixel Code -->
+   <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window,document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '769488616976958'); 
+      fbq('track', 'PageView');
+      </script>
+      <noscript>
+      <img height="1" width="1" 
+      src="https://www.facebook.com/tr?id=769488616976958&ev=PageView
+      &noscript=1"/>
+      </noscript>
+      <!-- End Facebook Pixel Code -->
+</head>
+
+   <body>
+
+      <!-- Slider Start -->
+      <section id="home" class="iq-main-slider p-0 position-relative">
+         <div class="banner-top-caption position-absolute"><h5 class="text-white">Sikh Heritage Month 2021</h5></div>
+         <div id="home-slider" class="slider m-0 p-0">
+            <div class="slide slick-bg s-bg-1">
+               <div class="container-fluid position-relative h-100">
+                  <div class="slider-inner h-100">
+                     <div class="trailor-video">
+                        <h1 class="slider-text big-title title text-uppercase" data-animation-in="fadeInLeft"
+                              data-delay-in="0.6">Promises</h1>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- <div class="slide slick-bg s-bg-2">
+               <div class="container-fluid position-relative h-100">
+                  <div class="slider-inner h-100">
+                     <div class="trailor-video">
+                        <h1 class="slider-text big-title title text-uppercase" data-animation-in="fadeInLeft"
+                              data-delay-in="0.6">Promises</h1>
+                     </div>
+                  </div>
+               </div>
+            </div> -->
+         </div>
+         <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+            <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" width="44px" height="44px" id="circle"
+               fill="none" stroke="currentColor">
+               <circle r="20" cy="22" cx="22" id="test"></circle>
+            </symbol>
+         </svg>
+         <img src="{% static 'images/tri.png' %}" class="img-fluid position-absolute banner-tri">
+      </section>
+      <!-- Slider End -->
+
+      <section class="movie-detail below-banner position-relative pt-5 pt-md-0">
+         <div class="movie-detail-wrp overflow-hidden">
+            <div class="container-fluid">
+               <div class="row justify-content-between">
+                  <div class="col-md-6 d-flex align-items-end">
+                     <div class="row w-100 mb-4 mb-md-0">
+                        <div class="col-7 d-flex align-items-center">
+                           <div class="pr-content w-100">
+                              <p class="text-white mb-md-0">The Duty Honour & Izzat Project is<br><strong>Funded by the Government Of Canada</strong></p>
+                           </div>
+                        </div>
+                        <div class="col-5 d-flex align-items-center">
+                           <div class="pr-gov w-100 text-center">
+                              <img src="{% static 'images/cananda.png' %}" class="img-fluid" width="180">
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="col-md-6 col-lg-5">
+                     <div class="pr-right-content text-center">
+                        <h4 class="text-white right-title mb-5">Presented By <a href="http://www.imfc.org/" target="_blank">Indus Media Foundation</a><br>In Association With<br>Minefilms<br><a href="http://www.internationalmovie.com/" target="_blank">International Movie Services</a><br><a href="http://www.renegadeartsentertainment.com/" target="_blank">Renegade Arts Entertainment</a></h4>
+                        <div class="p-3 text-center position-relative top-social-card">
+                           <div class="d-flex justify-content-center align-items-center">
+                              <a href="http://www.imfc.org/" target="_blank" class="t-icon">
+                                 <img src="{% static 'images/indus-white.png' %}" class="img-fluid" width="32">
+                              </a>
+                              <a href="https://www.facebook.com/IndusMediaFoundation/" target="_blank" class="t-icon">
+                              <img src="{% static 'images/facebook.png' %}" class="img-fluid" width="32">
+                              </a>
+                              <a href="https://twitter.com/induscanada?lang=en" target="_blank" class="t-icon">
+                              <img src="{% static 'images/twitter.png' %}" class="img-fluid" width="32">
+                              </a>
+                              <a href="https://www.instagram.com/explore/tags/indusmediafoundation/" target="_blank" class="t-icon">
+                              <img src="{% static 'images/instagram.png' %}" class="img-fluid" width="32">
+                              </a>
+                              <a href="https://www.youtube.com/channel/UCPrYjKlrHo-CcJDgdwCfVTg" target="_blank" class="t-icon">
+                              <img src="{% static 'images/youtube.png' %}" class="img-fluid" width="32">
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <a href="#vdo-trailer" class="downbox text-center smoothness">
+            <p class="text-uppercase mb-1">More</p>
+            <i class="fa fa-chevron-down"></i>
+            <div class="downbox-inner">
+               <span></span>
+               <span></span>
+               <span></span>
+            </div>
+         </a>
+      </section>
+
+      <section class="d-md-none">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-12">
+                  <div class="dropdown">
+                     <button id="dLabel" class="dropdown-select" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                       Trailer
+                       <span class="caret"></span>
+                     </button>
+                     <ul class="dropdown-menu" aria-labelledby="dLabel">
+                       <li>Trailer</li>
+                       <li>Media</li>
+                       <li>Cast & Crew</li>
+                       <li>BTS Kelowna</li>
+                       <li>BTS Aldergrove</li>
+                       <li>Story</li>
+                       <li>Share</li>
+                       <li>Support</li>
+                       <li>Learn</li>
+                     </ul>
+                   </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <section class="trending-tab-bg" id="vdo-trailer">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-12">             
+                  <div class="trending-custom-tab">
+                     <div class="tab-title-info position-relative">
+                        <ul class="trending-pills d-flex nav nav-pills justify-content-center align-items-center text-center"
+                           role="tablist">
+                           <li class="nav-item">
+                              <a class="nav-link active show" data-toggle="pill" href="#trending-data1"
+                                 role="tab" aria-selected="true">Trailers</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link text-secondary">Media</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link text-secondary">Cast & Crew</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link text-secondary">BTS Kelowna</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link text-secondary">BTS Aldergrove</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link text-secondary">Story</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link text-secondary">Share</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link text-secondary">Support</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link text-secondary">Learn</a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <section class="overflow-hidden">
+         <div class="row">
+            <div class="col-12">               
+               <div class="trending-custom-tab">
+                  <div class="trending-content p-0">
+                     <div id="trending-data1" class="overview-tab tab-pane fade active show">
+                      
+                        <div class="trending-info align-items-center w-100 animated fadeInUp">                           
+                        <iframe width="100%" height="750" src="{{ video }}" frameborder="0" allow="accelerometer; autoplay" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin-bottom: -6px;"></iframe>
+                        </div>
+                       
+                     </div>
+                     
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <section class="overflow-hidden sponsor-wrp py-5 bg-white position-relative" style="background: url('/static/images/tri-sponsor.png') no-repeat; background-position: top right; background-size: 60%;">
+         <div class="container">
+            <div class="row">
+               <div class="col-12"> 
+                  <h3 class="text-dark mb-4"><strong>Sponsors Zone</strong></h3>
+               </div>
+            </div>
+            
+            <div class="row supported_wrp mb-0 clearfix">
+               <div class="col-12 col-md-12 col-lg-6">
+                  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="6000">
+                     <div class="carousel-inner">
+                        <div class="carousel-item active">
+                           <div class="supported_card position-relative d-md-flex align-items-center justify-content-between">
+                              <div class="supported_inner position-relative overflow-hidden">
+                                 <h3 class="text-theme mb-0">Promises Casting Supported By : Vancouver Police Department</h3>
+                              </div>
+                              <img src="{% static 'images/voncouver.png' %}" class="img-fluid logo-batch" width="100">
+                           </div>
+                         </div>
+                       <div class="carousel-item">
+                         <div class="supported_card position-relative d-md-flex align-items-center justify-content-between">
+                            <div class="supported_inner position-relative overflow-hidden">
+                               <h3 class="text-theme mb-0">MILITARY VEHICLES<br>Sponsored by: </h3>
+                            </div>
+                            <a href="https://www.pacificblue.ca/" target="blank"><img src="{% static 'images/pbx-logo.png' %}" class="img-fluid logo-batch" width="100"></a>                           
+                         </div>
+                       </div>
+                       <div class="carousel-item">
+                         <div class="supported_card position-relative d-md-flex align-items-center justify-content-between">
+                            <div class="supported_inner position-relative overflow-hidden">
+                               <h3 class="text-theme mb-0">ADMINISTRATIVE SERVICES<br>Supported by:</h3>
+                            </div>
+                            <a href="https://primuslaw.ca/" target="blank"><img src="{% static 'images/primus-logo.png' %}" class="img-fluid logo-batch" width="100"></a>
+                         </div>
+                       </div>
+                     </div>
+                   </div>
+                   
+               </div>
+            </div>
+               
+            <br>
+
+            <div class="row my-5">
+               <div class="col-12"> 
+                  <div class="tvthrillers-contens">
+                     <ul class="favorites-slider list-inline row p-0 mb-0">
+                        {% for i in sponsoredblocktwo_obj %}
+                        <li class="slide-item">
+                           <div class="block-images text-center position-relative">
+                              <div class="img-box">
+                                 <img src="/media/{{ i.image }}" class="img-fluid d-inline-block" alt="" width="150">
+                              </div>
+                           </div>
+                        </li>
+                        {% endfor %}
+                     </ul>
+                  </div>
+               </div>
+            </div>
+
+            <div class="row">
+               <div class="col-12">
+                  <hr>
+               </div>
+            </div>
+
+            <div class="row my-5">
+               <div class="col-12"> 
+                  <div class="tvthrillers-contens">
+                     <ul class="favorites-slider sponsors-slider list-inline row p-0 mb-0">
+                        {% for i in sponsoredblockthree_obj %}
+                        <li class="slide-item">
+                        
+                           <div class="block-images text-center position-relative">
+                              <div class="img-box">
+                                 <img src="/media/{{ i.image }}" class="img-fluid d-inline-block" alt="" width="150">
+                              </div>
+                           </div>
+                          
+                        </li>
+                        {% endfor %}
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      
+      <section class="sign-in-page position-relative py-5 form-bw border-top">
+         <div class="container">
+            <div class="row justify-content-center height-self-center my-5">
+               <div class="col-lg-6 col-md-12 align-self-center">
+                  <div class="sign-user_card p-3 p-md-5 mb-4 mb-md-0">                
+                     <div class="sign-in-page-data">
+                        <div class="sign-in-from w-100 m-auto">
+                           <h3 class="mb-3 text-center">Connect With Us</h3>
+                           <form class="mt-4" method="POST">
+                              {% csrf_token %}
+                              <div class="form-group">                                 
+                                 <input type="text" class="form-control mb-0" id="exampleInputEmail2" name="name" placeholder="Full Name" autocomplete="off" required>
+                              </div>
+                              <div class="form-group">                                 
+                                 <input type="email" class="form-control mb-0" id="exampleInputEmail3" name="email" placeholder="Email" autocomplete="off" required>
+                              </div>
+                              <div class="form-group">                                 
+                                 <input type="text" class="form-control mb-0" id="exampleInputEmail3" name="number" placeholder="Phone Number" autocomplete="off" required>
+                              </div> 
+                              <div class="form-group">                                 
+                                 <textarea type="text" class="form-control mb-0" id="exampleInputEmail3" name="messages" placeholder="Message" autocomplete="off" required></textarea>
+                              </div> 
+                              <div class="custom-control custom-checkbox mb-3">
+                                 <input type="checkbox" class="custom-control-input" onchange="check();" id="customCheck">
+                                 <label class="custom-control-label" for="customCheck">I accept <a href="#" class="text-warning"> Terms and Conditions</a></label>
+                              </div>                      
+                                 
+                              <button type="submit" id="submit_button" class="btn btn-hover" disabled>Submit</button>
+                                                                  
+                           </form>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+         
+      </section>
+
+      <section class="bg-dark position-relative pt-3 pb-4">
+         <div class="container">
+            <div class="row justify-content-center height-self-center">
+               <div class="col-lg-5 col-md-12">
+                  <div class="sign-view text-center">
+                     <a href="http://www.imfc.org/" target="_blank"><img src="{% static 'images/mb.png' %}" class="img-fluid"></a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+   
+
+   {% if messages %}
+   {% for message in messages %}
+   <div class="text-center">
+   <div class="alert alert-primary alert-dismissible fade show text-center d-inline-flex" role="alert">
+      <strong>{{ message }}</strong> .
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+   </div>
+   {% endfor %}
+   {% endif %}
+
+   <footer class="mb-0 text-center">
+      <div class="container-fluid">
+         <div class="block-space">
+            <div class="row justify-content-center">
+               <div class="col-lg-6 col-md-12">
+                  <div class="trending-info align-items-center w-100 animated fadeInUp">
+                     <h1 class="trending-text big-title text-uppercase">Promises.movie</h1>
+                     <p class="trending-dec w-100 text-light">The video features excerpts from our forthcoming short heritage film "Promises" which we hope to complete in time for Sikh Heritage Month 2021. Stay tuned for more information on it on our FaceBook page (https://www.facebook.com/IndusMediaFo...) and on www.Promises.Media but for now, we hope the preview is a reminder that in the past we have stood together, firm in the face of tyranny and hate. If race, colour, language differences are being stoked today to intimidate, exclude and divide, it becomes all the more important to remember that in the past, we have come together successfully to defeat the greatest of evils.
+                     </p>
+                  </div>
+                  <div class="d-flex justify-content-center">
+                        <a href="https://www.facebook.com/IndusMediaFoundation/" target="_blank" class="s-icon">
+                        <i class="ri-facebook-fill"></i>
+                        </a>
+                        <a href="https://twitter.com/induscanada?lang=en" target="_blank" class="s-icon">
+                        <i class="ri-twitter-fill"></i>
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCPrYjKlrHo-CcJDgdwCfVTg" target="_blank" class="s-icon">
+                        <i class="ri-youtube-fill"></i>
+                        </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="copyright py-4">
+         <div class="container-fluid">
+            <p class="mb-0 text-center text-body">© <strong>Indus Media Foundation - REMEMBRANCE DAY 2020</strong>, Funded by Government of Canada</p>
+         </div>
+      </div>
+   </footer>
+      <!-- MainContent End-->
+   <style>
+      .alert.alert-primary {
+         position: fixed;
+         top: 15rem;
+         left: 50%;
+         z-index: 9999;
+         transform: translateX(-50%);
+         width: 300px;
+         max-width: 100%;
+      }
+      @media screen and (max-width: 575px) {
+      .alert.alert-primary {
+         top: 5rem;
+      }
+      }
+   </style>
+   <!-- back-to-top -->
+   <div id="back-to-top">
+      <a class="top" href="#top" id="top"> <i class="fa fa-angle-up"></i> </a>
+   </div>
+   <!-- back-to-top End -->
+
+   <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+   <script src="{% static 'js/popper.min.js' %}"></script>
+   <script src="{% static 'js/bootstrap.min.js' %}"></script>
+   <script src="{% static 'js/slick.min.js' %}"></script>
+   <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+   <script src="{% static 'js/select2.min.js' %}"></script>
+   <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+   <script src="{% static 'js/slick-animation.min.js' %}"></script>
+   <script src="{% static 'js/custom.js' %}"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+   <script type="text/javascript">
+      $(function(){
+      new WOW().init();
+      });
+   </script>
+   <script type="text/javascript">
+   
+      $(window).scroll(function(){
+      var scrollHeight = $(window).scrollTop();
+      if(scrollHeight > 50){
+         $("body").addClass("body-change");
+         
+      } else{
+         $("body").removeClass("body-change");
+      }
+
+      })
+      
+
+   </script>
+   <script>
+      $(document).ready(function(){
+      // Add smooth scrolling to all links
+      $(".smoothness").on('click', function(event) {
+         if (this.hash !== "") {
+            event.preventDefault();
+
+            var hash = this.hash;
+            $('html, body').animate({
+            scrollTop: $(hash).offset().top - 0
+            }, 800);
+         } 
+      });
+      });
+   </script>
+
+   <script>
+      $('.dropdown-menu li').on('click', function() {
+      var getValue = $(this).text();
+      $('.dropdown-select').text(getValue);
+      });
+   </script>
+   <script type="text/javascript">
+      $(window).scroll(function(){
+      var scrollHeight = $(window).scrollTop();
+      if(scrollHeight > 2650){
+      $(".sign-in-page").addClass("sign-change");
+      
+      } else{
+      $(".sign-in-page").removeClass("sign-change");
+      }
+      
+      })
+      </script>
+      
+      <script type="text/javascript">
+         jQuery('.sponsors-slider').slick({
+         autoplay: true,
+         autoplaySpeed: 3000,
+         dots: false,
+         arrows: true,
+         infinite: true,
+         speed: 300,
+         slidesToShow: 5,
+         slidesToScroll: 1,      
+         // appendArrows: $('#sm-slick-arrow'),
+         
+         nextArrow: '<a href="#" class="slick-arrow slick-next"><i class= "fa fa-chevron-right"></i></a>',
+         prevArrow: '<a href="#" class="slick-arrow slick-prev"><i class= "fa fa-chevron-left"></i></a>',
+         responsive: [
+         {
+            breakpoint: 1200,
+            settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: true
+            }
+         },
+         {
+            breakpoint: 768,
+            settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1
+            }
+         },
+         {
+            breakpoint: 480,
+            settings: {
+            // arrows: false,
+            slidesToShow: 1,
+            slidesToScroll: 1
+            }
+         }
+         ]
+      });
+      </script>
+
+      <script>
+      $(document).ready(function() {
+        $(".owl_carousel").owlCarousel({
+          //navigation : true,
+          nav:true,
+          dots:false,
+          navText:['',''],
+           autoplay: true,
+           autoPlaySpeed: 3000,
+           autoPlayTimeout: 3000,
+           autoplayHoverPause: true,
+            loop : true,
+          responsive:{
+              0:{
+                  items:1
+              },
+              600:{
+                  items:1
+              },
+              1000:{
+                  items:1
+              }
+          }
+        });
+      });
+    </script>
+   </body>
+</html>

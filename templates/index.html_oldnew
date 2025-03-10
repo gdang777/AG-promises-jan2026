@@ -1,0 +1,135 @@
+{% load static %}
+<!doctype html>
+<html lang="en-US">
+<head>
+   <!-- Required meta tags -->
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Promises</title>
+   <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" />
+   <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
+   <link rel="stylesheet" href="{% static 'css/typography.css' %}">
+   <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+   <link rel="stylesheet" href="{% static 'css/responsive.css' %}" />
+
+   <!-- Global site tag (gtag.js) - Google Analytics -->
+   <script async src="https://www.googletagmanager.com/gtag/js?id=G-K94Z1JEH46"></script>
+   <script>
+     window.dataLayer = window.dataLayer || [];
+     function gtag(){dataLayer.push(arguments);}
+     gtag('js', new Date());
+     gtag('config', 'G-K94Z1JEH46');
+   </script>
+</head>
+
+<body>
+   <!-- Slider Start -->
+   <section id="home" class="iq-main-slider p-0 position-relative">
+      <div class="banner-top-caption position-absolute"><h5 class="text-white">Sikh Heritage Month 2025</h5></div>
+      <div id="home-slider" class="slider m-0 p-0">
+         <div class="slide slick-bg s-bg-1">
+            <div class="container-fluid position-relative h-100">
+               <div class="slider-inner h-100">
+                  <div class="trailor-video">
+                     <h1 class="slider-text big-title title text-uppercase" data-animation-in="fadeInLeft" data-delay-in="0.6">Promises</h1>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- Slider End -->
+
+   <section class="movie-detail below-banner position-relative pt-5 pt-md-0">
+      <div class="movie-detail-wrp overflow-hidden">
+         <div class="container-fluid">
+            <div class="row justify-content-between">
+               <div class="col-md-6 d-flex align-items-end">
+                  <div class="row w-100 mb-4 mb-md-0">
+                     <div class="col-7 d-flex align-items-center">
+                        <div class="pr-content w-100">
+                           <p class="text-white mb-md-0">The Duty Honour & Izzat Project is<br><strong>Funded by the Government Of Canada</strong></p>
+                        </div>
+                     </div>
+                     <div class="col-5 d-flex align-items-center">
+                        <div class="pr-gov w-100 text-center">
+                           <img src="{% static 'images/cananda.png' %}" class="img-fluid" width="180">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="col-md-6 col-lg-5">
+                  <div class="pr-right-content text-center">
+                     <h4 class="text-white right-title mb-0">Presented By <a href="http://www.imfc.org/" target="_blank">Indus Media Foundation</a><br>In Association With<br>Minefilms<br><a href="http://www.internationalmovie.com/" target="_blank">International Movie Services</a><br><a href="http://www.renegadeartsentertainment.com/" target="_blank">Renegade Arts Entertainment</a></h4>
+                  </div>
+                  <div class="pr-right-content text-center mt-4">
+                     <div class="p-3 text-center position-relative top-social-card">
+                        <div class="d-flex justify-content-center align-items-center">
+                           <a href="http://www.imfc.org/" target="_blank" class="t-icon">
+                              <img src="{% static 'images/indus-white.png' %}" class="img-fluid" width="32">
+                           </a>
+                           <a href="https://www.facebook.com/IndusMediaFoundation/" target="_blank" class="t-icon">
+                           <img src="{% static 'images/facebook.png' %}" class="img-fluid" width="32">
+                           </a>
+                           <a href="https://twitter.com/induscanada?lang=en" target="_blank" class="t-icon">
+                           <img src="{% static 'images/twitter.png' %}" class="img-fluid" width="32">
+                           </a>
+                           <a href="https://www.youtube.com/channel/UCPrYjKlrHo-CcJDgdwCfVTg" target="_blank" class="t-icon">
+                           <img src="{% static 'images/youtube.png' %}" class="img-fluid" width="32">
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <section class="overflow-hidden" id="trailers">
+      <div class="row">
+         <div class="col-12">               
+            <div class="trending-custom-tab">
+               <div class="trending-content p-0">
+                  <div id="trending-data1" class="overview-tab tab-pane fade active show">
+                     <div class="trending-info align-items-center w-100 animated fadeInUp"> 
+                        <!-- Updated video section to use local video -->
+                        <video style="width: 100%; height: auto;" src="/media/your_video.mp4" controls></video>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <footer class="mb-0 py-4 text-center">
+      <div class="container-fluid">
+         <div class="block-space">
+            <div class="row justify-content-center">
+               <div class="col-lg-6 col-md-12">
+                  <div class="d-flex justify-content-center mb-3">
+                     <a href="https://www.facebook.com/IndusMediaFoundation/" target="_blank" class="s-icon">
+                     <i class="ri-facebook-fill"></i>
+                     </a>
+                     <a href="https://twitter.com/induscanada?lang=en" target="_blank" class="s-icon">
+                     <i class="ri-twitter-fill"></i>
+                     </a>
+                     <a href="https://www.youtube.com/channel/UCPrYjKlrHo-CcJDgdwCfVTg" target="_blank" class="s-icon">
+                     <i class="ri-youtube-fill"></i>
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="copyright">
+         <div class="container-fluid">
+            <p class="mb-0 text-center text-body">&copy; <strong>Indus Media Foundation.</strong></p>
+         </div>
+      </div>
+   </footer>
+</body>
+</html>

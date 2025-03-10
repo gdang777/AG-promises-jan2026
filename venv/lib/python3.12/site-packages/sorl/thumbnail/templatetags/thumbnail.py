@@ -1,20 +1,19 @@
 import decimal
 import logging
-import sys
-import re
 import os
+import re
+import sys
 from functools import wraps
 
+from django.conf import settings
 from django.template import Library, Node, NodeList, TemplateSyntaxError
 from django.utils.encoding import smart_str
-from django.conf import settings
 
-from sorl.thumbnail.conf import settings as sorl_settings
 from sorl.thumbnail import default
-from sorl.thumbnail.images import ImageFile, DummyImageFile
+from sorl.thumbnail.conf import settings as sorl_settings
+from sorl.thumbnail.images import DummyImageFile, ImageFile
 from sorl.thumbnail.parsers import parse_geometry
 from sorl.thumbnail.shortcuts import get_thumbnail
-
 
 register = Library()
 kw_pat = re.compile(r'^(?P<key>[\w]+)=(?P<value>.+)$')
@@ -191,8 +190,8 @@ def thumbnail(parser, token):
     return ThumbnailNode(parser, token)
 
 
-@safe_filter(error_output=False)
 @register.filter
+@safe_filter(error_output=False)
 def is_portrait(file_):
     """
     A very handy filter to determine if an image is portrait or landscape.
@@ -205,8 +204,8 @@ def is_portrait(file_):
     return image_file.is_portrait()
 
 
-@safe_filter(error_output='auto')
 @register.filter
+@safe_filter(error_output='auto')
 def margin(file_, geometry_string):
     """
     Returns the calculated margin for an image and geometry
@@ -237,8 +236,8 @@ def margin(file_, geometry_string):
     return ' '.join(['%dpx' % n for n in margin])
 
 
-@safe_filter(error_output='auto')
 @register.filter
+@safe_filter(error_output='auto')
 def background_margin(file_, geometry_string):
     """
     Returns the calculated margin for a background image and geometry
@@ -278,13 +277,13 @@ def text_filter(regex_base, value):
     return value
 
 
-@safe_filter(error_output='auto')
 @register.filter
+@safe_filter(error_output='auto')
 def markdown_thumbnails(value):
     return text_filter(r'!\[(%(re_cap)s)?\][ ]?\((%(re_img)s)\)', value)
 
 
-@safe_filter(error_output='auto')
 @register.filter
+@safe_filter(error_output='auto')
 def html_thumbnails(value):
     return text_filter(r'<img(?: alt="(%(re_cap)s)?")? src="(%(re_img)s)"', value)

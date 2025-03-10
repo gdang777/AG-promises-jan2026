@@ -1,7 +1,6 @@
 from sorl.thumbnail.conf import settings
 from sorl.thumbnail.helpers import toint
-from sorl.thumbnail.parsers import parse_crop
-from sorl.thumbnail.parsers import parse_cropbox
+from sorl.thumbnail.parsers import parse_crop, parse_cropbox
 
 
 class EngineBase:
@@ -98,7 +97,7 @@ class EngineBase:
             return image
         elif crop == 'smart':
             # Smart cropping is suitably different from regular cropping
-            # to warrent it's own function
+            # to warrant it's own function
             return self._entropy_crop(image, geometry[0], geometry[1], x_image, y_image)
 
         # Handle any other crop option with the backend crop function.
