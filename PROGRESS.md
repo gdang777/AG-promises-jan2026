@@ -38,8 +38,11 @@ Last Updated: 2026-01-27
   - Fixed broken single-video display by implementing functional Carousel
   - Restored custom video player controls (Rewind/Forward)
   - Fixed broken thumbnails by implementing fallback logic (Azure vs Local)
+  - Applied fallback logic to Video Player `poster` attribute
+  - Set specific custom thumbnail for 2nd Trailer video (Man in Turban)
 
 - [x] **Documentation & Polish (2026-01-27)**
+
   - Created `README.md` with project overview and setup
   - Created `DEPLOYMENT.md` with Google Cloud & Azure guides
   - Added `Dockerfile` for containerization
@@ -52,6 +55,11 @@ Last Updated: 2026-01-27
 ## In Progress
 
 - [ ] (Add current work items here)
+
+- [x] **Carousel Layout Fix (2026-01-28)**
+  - Fixed misaligned left scroll arrow
+  - Removed incorrect margin settings in CSS
+
 
 ---
 

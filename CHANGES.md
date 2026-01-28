@@ -6,10 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ---
 
-## [Unreleased]
+## [2026-01-28] - Carousel Layout Fix
 
-### Changed
-- (Future changes will be logged here)
+### Fixed
+- **Carousel Controls:** Fixed the position of the left and right scroll arrows in the carousel. The left arrow was previously centered due to an incorrect `margin-left` style. Adjusted both margins to `15px` for symmetry and alignment with the container edges.
 
 ---
 
@@ -18,6 +18,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Fixed
 - **Trailers Section:** Replaced static single-video display with a functional Bootstrap carousel iterating over all 4 trailer videos.
 - **Thumbnails:** Fixed broken thumbnails by adding logic to fall back to a static placeholder (`video-thumbnail.png`) when Azure `background_url` is missing (resolving local data issues).
+- **Video Poster:** Applied the same fallback logic to the main `<video>` tag so it shows a thumbnail when not playing.
+- **Specific Asset:** Added override logic to display a custom thumbnail (`trailer_2.png`) specifically for the 2nd video in the Trailers carousel.
 - **Video Player:** Restored missing custom controls (Rewind, Forward, Fullscreen) to the video player.
 
 ### Changed
