@@ -39,6 +39,13 @@ Last Updated: 2026-01-27
   - Restored custom video player controls (Rewind/Forward)
   - Fixed broken thumbnails by implementing fallback logic (Azure vs Local)
 
+- [x] **Documentation & Polish (2026-01-27)**
+  - Created `README.md` with project overview and setup
+  - Created `DEPLOYMENT.md` with Google Cloud & Azure guides
+  - Added `Dockerfile` for containerization
+  - Updated Banner Year to 2026
+
+
 
 ---
 

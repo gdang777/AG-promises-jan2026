@@ -22,6 +22,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Changed
 - Standardized carousel indicator logic in `index.html`.
+- Updated Home Banner text to "Sikh Heritage Month 2026".
+
+### Added
+- `README.md`: Comprehensive project documentation.
+- `DEPLOYMENT.md`: Detailed deployment guides for GCP and Azure.
+- `Dockerfile`: Production-ready container configuration.
+
 
 
 ## [2026-01-27] - Dependency Updates
