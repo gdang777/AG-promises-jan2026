@@ -23,7 +23,7 @@ class VideoLink(models.Model):
     # background_url = models.FileField(upload_to='videos', null=True, blank=True, verbose_name="Background Image")
     # link=models.CharField(max_length=255, null=True, blank=True)
 
-    video_url = models.FileField(upload_to='videos', storage=AMS)
+    video_url = models.FileField(upload_to='videos', storage=AMS, null=True, blank=True)
     background_url = models.FileField(upload_to='videos', null=True, blank=True, verbose_name="Background Image")
     link=models.CharField(max_length=255, null=True, blank=True)
     

@@ -13,6 +13,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ---
 
+## [2026-01-27] - Trailers & Frontend Fixes
+
+### Fixed
+- **Trailers Section:** Replaced static single-video display with a functional Bootstrap carousel iterating over all 4 trailer videos.
+- **Thumbnails:** Fixed broken thumbnails by adding logic to fall back to a static placeholder (`video-thumbnail.png`) when Azure `background_url` is missing (resolving local data issues).
+- **Video Player:** Restored missing custom controls (Rewind, Forward, Fullscreen) to the video player.
+
+### Changed
+- Standardized carousel indicator logic in `index.html`.
+
+
 ## [2026-01-27] - Dependency Updates
 
 ### Changed

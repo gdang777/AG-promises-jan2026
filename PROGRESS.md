@@ -34,6 +34,12 @@ Last Updated: 2026-01-27
 - [x] **Repository Migration (2026-01-27)**
   - Changed remote origin to new repository: `AG-promises-jan2026`
 
+- [x] **Trailers Section Restoration (2026-01-27)**
+  - Fixed broken single-video display by implementing functional Carousel
+  - Restored custom video player controls (Rewind/Forward)
+  - Fixed broken thumbnails by implementing fallback logic (Azure vs Local)
+
+
 ---
 
 ## In Progress
