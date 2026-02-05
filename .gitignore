@@ -1,2 +1,6 @@
+myenv/
+__pycache__/
+*.pyc
 promises/media/videos
 media/videos
+.env

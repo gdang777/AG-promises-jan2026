@@ -5,3 +5,12 @@ psycopg2-binary>=2.9.9
 pytz==2020.5
 sorl-thumbnail==12.7.0
 sqlparse==0.4.1
+
+# Production dependencies
+gunicorn==20.1.0
+whitenoise==6.4.0
+dj-database-url==2.1.0
+
+# Azure Storage
+azure-storage-blob==12.19.0
+django-storages==1.14.2

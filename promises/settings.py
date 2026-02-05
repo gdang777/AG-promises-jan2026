@@ -198,3 +198,6 @@ JAZZMIN_UI_TWEAKS = {
         "success": "btn-success"
     }
 }
+
+LOGIN_REDIRECT_URL = 'members_home'
+LOGOUT_REDIRECT_URL = 'index'

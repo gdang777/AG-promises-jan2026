@@ -2,6 +2,10 @@ from django.shortcuts import render, redirect
 from django.views import View
 from .models import *
 from django.contrib import messages
+from django.contrib.auth import login
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
+from django.contrib.auth.decorators import login_required
+from django.utils.decorators import method_decorator
 
 # Create your views here.
 
@@ -47,6 +51,8 @@ class Index(View):
             'sponsoredblocktwo_obj':sponsoredblocktwo_obj,
             'sponsoredblockthree_obj':sponsoredblockthree_obj,
             'sponsoredblockfour_obj':sponsoredblockfour_obj,
+            'signup_form': UserCreationForm(),
+            'login_form': AuthenticationForm(),
             }
         return render(request,'index.html',context)
 
@@ -61,3 +67,18 @@ class Index(View):
         messages.info(request, "Thankyou for your query, we'll get back to you soon.")
         return redirect('index')
    
+
+def signup_view(request):
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            login(request, user)
+            return redirect('members_home')
+    else:
+        form = UserCreationForm()
+    return render(request, 'registration/signup.html', {'form': form})
+
+@login_required
+def members_home_view(request):
+    return render(request, 'web_app/members_home.html')
